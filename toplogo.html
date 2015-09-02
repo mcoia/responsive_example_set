@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>MOBIUS Catalog</title>
+
+		<!-- Bootstrap -->
+		<link href="screens/bootstrap.min.css" rel="stylesheet">
+		
+		<!-- font-awesome -->
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<!-- custom css -->
+		<link href="screens/custom.css" rel="stylesheet">
+		
+	</head>
+	<body>
+		
 		<!-- HEADER -->
 		<div id="HEADER">
 		<!--               -->
@@ -6,17 +25,15 @@
 		<div>
 		
 		<div class="mobile_header" style="
-			padding-left: 15px;
-			padding-top: 6px;
-			background-color: #d52728;
+			padding: 15px 10px;
+			background-color: #ffffff;
 		">
 		
-				<a href="http://www.udayton.edu">
+				<a href="http://searchmobius.org/">
 					<div class="mobile_logo" style="
-							background-size: 238px 44px;
 							background-repeat: no-repeat;
-							background-color: #d52728;
-							height: 44px;
+							background-color: #ffffff;
+							height: 75px;
 					"></div>
 				</a>
 		</div>
@@ -28,7 +45,7 @@
 			border-radius: 0px;
 			border: 0px;
 			margin-bottom:0px;
-			//border-bottom: 5px solid #d52728;
+			//border-bottom: 5px solid #0096a7;
 			//border-bottom: 5px solid rgba(0,168,228,.8);
 			border-bottom: 5px solid #333;
 		">
@@ -43,22 +60,31 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="header_link navbar-brand" href="/" style="
+					<div class="header_link navbar-brand" style="
 						//font-family: 'Champion Lightwt A', Helvetica,Arial,sans-serif;
 						font-family: chronic;
-						background-color: #fff;
+						//background-color: #fff;
 						//letter-spacing: 1px;
-						font-weight: 400;
-						color: #d52728;
+						//font-weight: 400;
+						color: #0096a7;
 						//font-size: 23px;
-						font-size:22px;
+						//font-size:22px;
 						line-height: 27px;
 						position: relative;
 						//text-transform: uppercase;
-					">Libraries Catalog</a>
+						background: #0096a7 none repeat scroll 0 0;
+					    clear: both;
+					    float: right;
+					    height: 1.3em;
+					    margin: 0;
+					    padding: 0.5em 0;
+					    position: relative;
+					    text-align: right;
+					    width: 100%;
+					"></div>
 				</div>
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
+				<!-- Collect the nav links, forms, and other content for toggling 
 				<div class="collapse navbar-collapse" id="mobile_navbar" style="
 					background-color: white;
 				">
@@ -66,7 +92,7 @@
 							font-weight: 600;
 					">
 						<li>
-							<a href="/patroninfo">My Library Account</a></li>
+							<a href="https://flyers.udayton.edu/patroninfo">My Library Account</a></li>
 						
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Libraries <span class="caret"></span></a>
@@ -76,7 +102,7 @@
 								<li><a href="http://www.udayton.edu/libraries/">
 									Roesch Library</a></li>
 									
-								<li><a href="http://campus.udayton.edu/mary/">
+								<li><a href="https://www.udayton.edu/imri/">
 									Marian Library</a></li>
 									
 								<li><a href="http://www.udayton.edu/education/cmc/">
@@ -86,8 +112,8 @@
 							</ul>
 						</li>
 						
-						<li><a href="http://www.udayton.edu/libraries/get_research_help/askref.php">
-							Ask A Librarian</a></li>
+						<li><a href="https://www.udayton.edu/libraries/help.php">
+							Get Help</a></li>
 						
 						<li><a href="https://udayton.illiad.oclc.org/illiad/logon.html">
 							InterLibrary Loan</a></li>
@@ -103,14 +129,12 @@
 <!-- 							
 						<li><a href="http://libproxy.udayton.edu/login?url=http://newfirstsearch.oclc.org/dbname=WorldCat;done=referer;FSIP">
 							WorldCat</a></li>
- -->							
-						<li><a href="https://www.udayton.edu/libraries/get_research_help/feedback/report_a_catalog_error.php">
+							
+						<li><a href="https://www.udayton.edu/libraries/services/catalog-error-form.php">
 							Report a Catalog Error</a></li>
 							
-						<li><a href="https://www.udayton.edu/libraries/borrowing_hours_and_services/hours.php">
+						<li><a href="https://www.udayton.edu/libraries/hours.php">
 							Hours</a></li>
-						<li><a href="https://www.udayton.edu/libraries/index.php#7">
-							Contact Us</a></li>						
 					</ul>
 					 
 				</div><!-- /.navbar-collapse -->
@@ -131,16 +155,16 @@
 				//text-transform: uppercase;
 				//letter-spacing: 2px;
 				font-weight: 400;
-				color: #d52728;
+				color: #0096a7;
 				position: relative;
 				font-size: 34px;
 				line-height: 50px;
-				//border-bottom: 5px solid #d52728;
+				//border-bottom: 5px solid #0096a7;
 				//border-bottom: 5px solid rgba(0,168,228,.8);
 				border-bottom: 5px solid #333;
 				padding-bottom: 10px;
 			">
-				<a class="header_link" href="/" style="color: inherit;">Libraries Catalog</a>
+				<div class="header_link" style="color: inherit;"></a>
 			</div>
 		
 		<!-- /desktop header -->
@@ -150,6 +174,20 @@
 		<!--               -->
 		</div>
 		<!-- /HEADER-->
+		
+		
+		<span class="visible-xs">visible-xs</span>
+		<span class="visible-sm">visible-sm</span>
+		<span class="visible-md">visible-md</span>
+		<span class="visible-lg">visible-lg</span>
+		
+			
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
 	
 		<!-- MAIN PAGE BODY -->
 		
