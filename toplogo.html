@@ -1,22 +1,21 @@
 <!-- begin toplogo.html file -->
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>MOBIUS Catalog</title>
-
-		<!-- Bootstrap -->
-		<link href="screens/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="screens/bootstrap.min.css" rel="stylesheet">
 		
-		<!-- font-awesome -->
-		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-		<!-- custom css -->
-		<link href="screens/custom.css" rel="stylesheet">
-		
-	</head>
-	<body>
+<!-- font-awesome -->
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- custom css -->
+<link href="screens/custom.css" rel="stylesheet">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script type="text/javascript" src="/screens/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    	$("span:contains(WebPAC PRO)").hide(); //Hide the iii footer
+    });
+</script>
+	
 		
 		<!-- HEADER -->
 		<div id="HEADER">
@@ -48,7 +47,7 @@
 			margin-bottom:0px;
 			//border-bottom: 5px solid #0096a7;
 			//border-bottom: 5px solid rgba(0,168,228,.8);
-			border-bottom: 5px solid #333;
+			border-bottom: 5px solid #00457c;
 		">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -61,31 +60,23 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<div class="header_link navbar-brand" style="
+					<a class="header_link navbar-brand" href="/patroninfo" style="
 						//font-family: 'Champion Lightwt A', Helvetica,Arial,sans-serif;
 						font-family: chronic;
 						//background-color: #fff;
 						//letter-spacing: 1px;
-						//font-weight: 400;
-						color: #0096a7;
+						font-weight: 400;
+						background-color: #0096a7;
+				        color: #ffffff
 						//font-size: 23px;
-						//font-size:22px;
+						font-size:22px;
 						line-height: 27px;
 						position: relative;
 						//text-transform: uppercase;
-						background: #0096a7 none repeat scroll 0 0;
-					    clear: both;
-					    float: right;
-					    height: 1.3em;
-					    margin: 0;
-					    padding: 0.5em 0;
-					    position: relative;
-					    text-align: right;
-					    width: 100%;
-					"></div>
+					">My Library Account</a>
 				</div>
 
-				<!-- Collect the nav links, forms, and other content for toggling 
+				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="mobile_navbar" style="
 					background-color: white;
 				">
@@ -127,7 +118,7 @@
 						
 						<li><a href="http://www.ohiolink.edu/">
 							OhioLINK</a></li>
-<!-- 							
+ 							
 						<li><a href="http://libproxy.udayton.edu/login?url=http://newfirstsearch.oclc.org/dbname=WorldCat;done=referer;FSIP">
 							WorldCat</a></li>
 							
@@ -156,16 +147,17 @@
 				//text-transform: uppercase;
 				//letter-spacing: 2px;
 				font-weight: 400;
-				color: #0096a7;
+				background-color: #0096a7;
+				color: #ffffff
 				position: relative;
-				font-size: 34px;
-				line-height: 50px;
+				font-size: 22px;
+				line-height: 27px;
 				//border-bottom: 5px solid #0096a7;
 				//border-bottom: 5px solid rgba(0,168,228,.8);
-				border-bottom: 5px solid #333;
+				border-bottom: 5px solid #00457c;
 				padding-bottom: 10px;
 			">
-				<div class="header_link" style="color: inherit;"></a>
+				<a class="header_link" href="/patroninfo" style="color: inherit;">My Library Account</a>
 			</div>
 		
 		<!-- /desktop header -->
@@ -177,18 +169,13 @@
 		<!-- /HEADER-->
 		
 		
-		<span class="visible-xs">visible-xs</span>
+		<!--Testing<span class="visible-xs">visible-xs</span>
 		<span class="visible-sm">visible-sm</span>
 		<span class="visible-md">visible-md</span>
-		<span class="visible-lg">visible-lg</span>
+		<span class="visible-lg">visible-lg</span>-->
 		
-			
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
-	</body>
-</html>
+
+
 	
 		<!-- MAIN PAGE BODY -->
 		

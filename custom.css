@@ -34,7 +34,7 @@ a.header_link:hover {
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
 	color: #fff;
-	background-color: rgba(0,168,228,.8);
+	background-color: #0096a7;
 }
 
 .nav_widget>li>a {
