@@ -1,3 +1,22 @@
+<!-- begin toplogo.html file -->
+<!-- Bootstrap -->
+<link href="screens/bootstrap.min.css" rel="stylesheet">
+		
+<!-- font-awesome -->
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- custom css -->
+<link href="screens/custom.css" rel="stylesheet">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="/screens/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    	$("span:contains(WebPAC PRO)").hide(); //Hide the iii footer
+    });
+</script>
+	
+		
 		<!-- HEADER -->
 		<div id="HEADER">
 		<!--               -->
@@ -6,67 +25,69 @@
 		<div>
 		
 		<div class="mobile_header" style="
-			padding-left: 15px;
-			padding-top: 6px;
-			background-color: #d52728;
+			padding: 15px 10px;
+			background-color: #ffffff;
 		">
 		
-				<a href="http://www.udayton.edu">
+				<a href="http://searchmobius.org/">
 					<div class="mobile_logo" style="
-							background-size: 238px 44px;
 							background-repeat: no-repeat;
-							background-color: #d52728;
-							height: 44px;
-					"></div>
+							background-color: #ffffff;
+							height: 75px;
+					">
+					</div>
 				</a>
 		</div>
 		
 		<!-- mobile navbar -->
 		<div class="visible-sm visible-xs">
-		<nav class="navbar navbar-default" role="navigation" style="
+		<nav class="navbar" role="navigation" style="
 			//background-color: rgba(0,168,228,.8);
-			border-radius: 0px;
+			//border-radius: 0px;
 			border: 0px;
 			margin-bottom:0px;
-			//border-bottom: 5px solid #d52728;
+			//border-bottom: 5px solid #0096a7;
 			//border-bottom: 5px solid rgba(0,168,228,.8);
-			border-bottom: 5px solid #333;
+			//border-bottom: 5px solid #00457c;
 		">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header" style="
 					background-color: #fff;
 				">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile_navbar">
+					<!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile_navbar">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-					</button>
-					<a class="header_link navbar-brand" href="/" style="
+					</button> -->
+					<a class="header_link navbar-brand-mob" href="/patroninfo" style="
 						//font-family: 'Champion Lightwt A', Helvetica,Arial,sans-serif;
-						font-family: chronic;
-						background-color: #fff;
+						//font-family: chronic;
+						font-family:'Trebuchet MS',Verdana,Arial,Helvetica,sans-serif;
+						//background-color: #fff;
 						//letter-spacing: 1px;
-						font-weight: 400;
-						color: #d52728;
+						font-weight: bold;
+						background-color: #0096a7;
+				        color: #ffffff;
 						//font-size: 23px;
-						font-size:22px;
-						line-height: 27px;
+						font-size: 16px;
+						//line-height: 27px;
 						position: relative;
 						//text-transform: uppercase;
-					">Libraries Catalog</a>
+						width: 100%;			
+					">My Library Account</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="mobile_navbar" style="
+				<!-- <div class="collapse navbar-collapse" id="mobile_navbar" style="
 					background-color: white;
 				">
 					<ul class="nav navbar-nav" style="
 							font-weight: 600;
 					">
 						<li>
-							<a href="/patroninfo">My Library Account</a></li>
+							<a href="https://flyers.udayton.edu/patroninfo">My Library Account</a></li>
 						
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Libraries <span class="caret"></span></a>
@@ -76,7 +97,7 @@
 								<li><a href="http://www.udayton.edu/libraries/">
 									Roesch Library</a></li>
 									
-								<li><a href="http://campus.udayton.edu/mary/">
+								<li><a href="https://www.udayton.edu/imri/">
 									Marian Library</a></li>
 									
 								<li><a href="http://www.udayton.edu/education/cmc/">
@@ -86,8 +107,8 @@
 							</ul>
 						</li>
 						
-						<li><a href="http://www.udayton.edu/libraries/get_research_help/askref.php">
-							Ask A Librarian</a></li>
+						<li><a href="https://www.udayton.edu/libraries/help.php">
+							Get Help</a></li>
 						
 						<li><a href="https://udayton.illiad.oclc.org/illiad/logon.html">
 							InterLibrary Loan</a></li>
@@ -100,20 +121,18 @@
 						
 						<li><a href="http://www.ohiolink.edu/">
 							OhioLINK</a></li>
-<!-- 							
+ 							
 						<li><a href="http://libproxy.udayton.edu/login?url=http://newfirstsearch.oclc.org/dbname=WorldCat;done=referer;FSIP">
 							WorldCat</a></li>
- -->							
-						<li><a href="https://www.udayton.edu/libraries/get_research_help/feedback/report_a_catalog_error.php">
+							
+						<li><a href="https://www.udayton.edu/libraries/services/catalog-error-form.php">
 							Report a Catalog Error</a></li>
 							
-						<li><a href="https://www.udayton.edu/libraries/borrowing_hours_and_services/hours.php">
+						<li><a href="https://www.udayton.edu/libraries/hours.php">
 							Hours</a></li>
-						<li><a href="https://www.udayton.edu/libraries/index.php#7">
-							Contact Us</a></li>						
 					</ul>
 					 
-				</div><!-- /.navbar-collapse -->
+				</div>--><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
 		</div>
@@ -124,23 +143,26 @@
 		
 		<div class="visible-lg visible-md header_bottom desktop_header_bottom" style="
 				//font-family: 'Champion Lightwt A', Helvetica,Arial,sans-serif;
-				font-family: chronic;
-				padding-top: 10px;
+				//font-family: chronic;
+				font-family:'Trebuchet MS',Verdana,Arial,Helvetica,sans-serif;
+				padding-top: 5px;
 				padding-left: 15px;
 				//background-color: rgba(0,168,228,.8);
 				//text-transform: uppercase;
 				//letter-spacing: 2px;
-				font-weight: 400;
-				color: #d52728;
+				font-weight: bold;
+				background-color: #0096a7;
+				color: #ffffff;
 				position: relative;
-				font-size: 34px;
-				line-height: 50px;
-				//border-bottom: 5px solid #d52728;
+				font-size: 19px;
+				//line-height: 50px;
+				height: 40px;
+				//border-bottom: 5px solid #0096a7;
 				//border-bottom: 5px solid rgba(0,168,228,.8);
-				border-bottom: 5px solid #333;
-				padding-bottom: 10px;
+				//border-bottom: 5px solid #00457c;
+				padding-bottom: 5px;
 			">
-				<a class="header_link" href="/" style="color: inherit;">Libraries Catalog</a>
+				<a class="header_link" href="/patroninfo" style="color: inherit;">My Library Account</a>
 			</div>
 		
 		<!-- /desktop header -->
@@ -150,22 +172,10 @@
 		<!--               -->
 		</div>
 		<!-- /HEADER-->
-	
-		<!-- MAIN PAGE BODY -->
 		
-		<!-- our container for site content and grid system -->
-		<div class="container-fluid">
-		<div class="row" style="
-		padding-top:15px;
-		">
 		
-			<div class="col-md-12">
-				<div id="patron_links">
-				<!-- patron -->
-<!--{patron}-->
-				<!-- /patron -->
-				</div>
-			
-			<!-- BODY AREA -->
-			<div id="BODY_AREA">
-			<!--           -->
+		<!--Testing<span class="visible-xs">visible-xs</span>
+		<span class="visible-sm">visible-sm</span>
+		<span class="visible-md">visible-md</span>
+		<span class="visible-lg">visible-lg</span>-->
+<!--end toplogo.html-->
