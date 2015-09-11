@@ -12,6 +12,49 @@
 	font-style:normal; 
 }*/
 
+.vertical-margin {
+	margin: 1em 0;
+}
+
+.float-left {
+	float: left;
+	margin: 0 1em 1em 0;
+}
+
+#tabbedNavigation {
+	list-style:none;
+	padding-left:0;
+	height:18px;
+}
+#tabbedNavigation > li {
+	float: left;
+	margin-right:1em;
+}
+#tabbedNavigation > li > a {
+	display:block;
+	padding:0.5em 1em;
+	border-radius: 0.5em 0.5em 0 0;
+	background-color:#CCC;
+	text-decoration:none;
+	height:18px;
+	color:#333;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.75);
+
+	background-color: #DDD;
+}
+
+#tabbedNavigation > li.active {
+	padding: 0.5em 1em;
+	border-radius: 0.5em 0.5em 0 0;
+	background-color:#FFF;
+	color:#FFF;
+	border-width:1px 1px 0;
+	border-color:#AAA;
+	border-style: solid;
+	height:18px;
+	color:#333;
+	font-weight: bold;
+}
 
 body{
 	font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;

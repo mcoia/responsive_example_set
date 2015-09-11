@@ -51,17 +51,31 @@
 			</ul>
 		</div>
 
-		<div class="visible-sm visible-xs">
+		<!-- <div class="visible-sm visible-xs">
 			<ul id="mobile_tabs" class="nav nav-pills nav-stacked" data-tabs="tabs">
 				<li id="pill-keyword" class="active"><a href="#keyword" data-toggle="tab">Keyword</a></li>
 				<li id="pill-advanced"><a href="#advanced" data-toggle="tab">Advanced Search</a></li>
 				<li id="pill-author"><a href="#author" data-toggle="tab">Author / Title</a></li>
 				<li id="pill-subject"><a href="#subject" data-toggle="tab">Subject</a></li>
-				<!-- <li id="pill-journal"><a href="#journal" data-toggle="tab">Journal</a></li> -->
+				<li id="pill-journal"><a href="#journal" data-toggle="tab">Journal</a></li> 
 				<li id="pill-database"><a href="#database" data-toggle="tab">Database</a></li>
 				<li id="pill-numbers"><a href="#numbers" data-toggle="tab">Number</a></li>
 				<li id="pill-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>
 			</ul>
+		</div>-->
+
+		<div class="mobile vertical-margin">
+			<label for="selectNavigation" class="float-left">Search Type:</label>
+
+			<select name="selectNavigation" id="selectNavigation" class="mobile">
+				<option value="/search/X" selected="selected">Keyword</option>
+				<option value="/search/t">Title</option>
+				<option value="/search/a">Author</option>
+				<option value="/search/d">Subject</option>
+				<option value="/search/c">Numbers</option>
+				<option value="/search/y">Databases</option>
+				<option value="http://pq9se9hp4e.search.serialssolutions.com/">Journals</option>
+			</select>
 		</div>
 		
 		<div id="my-tab-content" class="tab-content">
