@@ -3,16 +3,7 @@
 	<head>
 <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"> <!-- Bootstrap --> <link href="/screens/bootstrap.min.css" rel="stylesheet"> <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> <script src="/screens/jquery.min.js"></script> <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"><!-- Custom CSS --> <link href="/screens/custom.css" rel="stylesheet"> <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
 <title>MOBIUS Catalog</title>
-<script type="text/javascript">
-$("#selectNavigation").on('change', function(e){
-	window.location = this.value;
-});
 
-$(".mobile-navigation").on('change', function(e){
-	if (this.value !== ""){
-		window.location = this.value;
-	}
-});</script>
 	</head>
 	<body>
 <!--{toplogo}-->
@@ -26,7 +17,7 @@ $(".mobile-navigation").on('change', function(e){
 		">
 			<!-- for toplogo and toplogo_loggedin change this line to the following  -->
 			<!-- <div class="col-md-12"> -->
-			<div class="col-md-12">
+			<div class="col-md-9 col-md-push-3">
 				<div id="patron_links">
 				<!-- patron -->
 <!--{patron}-->
@@ -50,44 +41,29 @@ $(".mobile-navigation").on('change', function(e){
 	
 		<div class="visible-lg visible-md">
 			<ul id="desktop_tabs" class="nav nav-tabs" data-tabs="tabs">
-				<li id="tab-keyword" class="active"><a href="/search/Y" data-toggle="tab">Keyword</a></li>
-				<li id="tab-advanced"><a href="/search/X">Advanced Search</a></li>
-				<li id="tab-title"><a href="/search/t">Title</a></li>
-				<li id="tab-author"><a href="/search/a">Author</a></li>
-				<li id="tab-subject"><a href="/search/d">Subject</a></li>
+				<li id="tab-keyword" class="active"><a href="#keyword" data-toggle="tab">Keyword</a></li>
+				<li id="tab-advanced"><a href="#advanced" data-toggle="tab">Advanced Search</a></li>
+				<li id="tab-title"><a href="#title" data-toggle="tab">Title</a></li>
+				<li id="tab-author"><a href="#author" data-toggle="tab">Author</a></li>
+				<li id="tab-subject"><a href="#subject" data-toggle="tab">Subject</a></li>
 				<!-- <li id="tab-journal"><a href="#journal" data-toggle="tab">Journal</a></li> -->
-				<!-- <li id="tab-database"><a href="#database" data-toggle="tab">Database</a></li>	 -->			
-				<li id="tab-numbers"><a href="#numbers">Number</a></li>
-				<!-- <li id="tab-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li> -->
+				<!--<li id="tab-database"><a href="#database" data-toggle="tab">Database</a></li>-->				
+				<li id="tab-numbers"><a href="#numbers" data-toggle="tab">Number</a></li>
+				<!--<li id="tab-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>-->
 			</ul>
 		</div>
-
-		<!-- <div class="visible-sm visible-xs">
-			<ul id="mobile_tabs" class="nav nav-pills nav-stacked" data-tabs="tabs">
-				<li id="pill-keyword" class="active"><a href="#keyword" data-toggle="tab">Keyword</a></li>
-				<li id="pill-advanced"><a href="#advanced" data-toggle="tab">Advanced Search</a></li>
-				<li id="pill-author"><a href="#author" data-toggle="tab">Author / Title</a></li>
-				<li id="pill-subject"><a href="#subject" data-toggle="tab">Subject</a></li>
-				<li id="pill-journal"><a href="#journal" data-toggle="tab">Journal</a></li> 
-				<li id="pill-database"><a href="#database" data-toggle="tab">Database</a></li>
-				<li id="pill-numbers"><a href="#numbers" data-toggle="tab">Number</a></li>
-				<li id="pill-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>
-			</ul>
-		</div>-->
-
 		<div class="visible-sm visible-xs mobile dropdown">
 			<label for="selectNavigation" class="float-left">Search Type:</label>
-
-			<select name="selectNavigation" id="selectNavigation" type="button" data-toggle="dropdown" class="mobile form-control btn btn-primary dropdown-toggle" onchange="location = this.options[this.selectedIndex].value;">
-				<option value="/search/X" selected="selected">Keyword</option>
-				<option value="/search/Y">Advanced Search</option>
-				<option value="/search/t">Title</option>
-				<option value="/search/a">Author</option>
-				<option value="/search/d">Subject</option>
-				<!--<option value="/search/s">Journal</option>-->
-				<!--<option value="/search/t">Databases</option>-->
-				<option value="/search/c">Numbers</option>
-				<!--<option value="/search/t">Reserves</option>-->
+			<select name="selectNavigation" id="mobile_drop" type="button" data-toggle="dropdown" class="mobile form-control btn btn-primary dropdown-toggle" >
+				<option id="mobile_keyword" value="#keyword">Keyword</option>
+				<option id="mobile_advanced" value="#advanced">Advanced Search</option>
+				<option id="mobile_title" value="#title">Title</option>
+				<option id="mobile_author" value="#author">Author</option>
+				<option id="mobile_subject" value="#subject">Subject</option>
+				<!-- <li id="pill-journal"><a href="#journal" data-toggle="tab">Journal</a></li> -->
+				<!--<li id="pill-database"><a href="#database" data-toggle="tab">Database</a></li>-->
+				<option id="mobile_numbers" value="#numbers">Number</option>
+				<!--<li id="pill-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>-->
 			</select>
 		</div>
 		
@@ -413,9 +389,9 @@ $(".mobile-navigation").on('change', function(e){
 				//	:do this only if we're NOT on the advanced search page
 				if ( (location.pathname != '/search/X') && (location.pathname != '/search/') && (location.pathname != '/search') ) {
 					document.getElementById('tab-advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
-					document.getElementById('pill-advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
+					//document.getElementById('mobile_advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
 					document.getElementById('tab-advanced').getElementsByTagName('a')[0].href='/search/X';
-					document.getElementById('pill-advanced').getElementsByTagName('a')[0].href='/search/X';
+					document.getElementById('mobile_advanced').getElementsByTagName('a')[0].href='/search/X';
 				}
 				//do this if we're on the advanced search page
 				else {
@@ -1323,6 +1299,10 @@ $(".mobile-navigation").on('change', function(e){
 	<script type="text/javascript">
 		
 		$(document).ready(function() {
+			$('#mobile_drop').on('change', function() {
+				location = this.options[this.selectedIndex].value;  
+				$('a[href="' + location.hash + '"]').tab('show');
+			});	
 			if (location.hash !== '') $('a[href="' + location.hash + '"]').tab('show');
 			
 			return $('a[data-toggle="tab"]').on('shown', function(e) {
@@ -1334,7 +1314,7 @@ $(".mobile-navigation").on('change', function(e){
 			switch (location.pathname) {
 				case "/":
 					$('#desktop_tabs a[href="#keyword"]').tab('show');
-					$('#mobile_tabs a[href="#keyword"]').tab('show');
+					$('#mobile_drop a[href="#keyword"]').tab('show');
 					console.log("keyword: ");
 					break;
 
@@ -1342,34 +1322,42 @@ $(".mobile-navigation").on('change', function(e){
 				case "/search/":
 				case "/search":
 					$('#desktop_tabs a[href="#advanced"]').tab('show');
-					$('#mobile_tabs a[href="#advanced"]').tab('show');
+					$('#mobile_drop a[href="#advanced"]').tab('show');
 					console.log("advanced: ");
 					break;
-					
-				case "/search/a":
+				
+				//case "/search/a":
 				case "/search/t":
-				case "/search/j":
+				//case "/search/j":
+					$('#desktop_tabs a[href="#title"]').tab('show');
+					$('#mobile_drop a[href="#title"]').tab('show');
+					console.log("title:");
+					break;
+
+				case "/search/a":
+				//case "/search/t":
+				//case "/search/j":
 					$('#desktop_tabs a[href="#author"]').tab('show');
-					$('#mobile_tabs a[href="#author"]').tab('show');
-					console.log("author / title / journal: ");
+					$('#mobile_drop a[href="#author"]').tab('show');
+					console.log("author: ");
 					break;
 					
 				case "/search/d":
 					$('#desktop_tabs a[href="#subject"]').tab('show');
-					$('#mobile_tabs a[href="#subject"]').tab('show');
+					$('#mobile_drop a[href="#subject"]').tab('show');
 					console.log("subject: ");
 					break;
 					
 				case "/search/y":
 					$('#desktop_tabs a[href="#database"]').tab('show');
-					$('#mobile_tabs a[href="#database"]').tab('show');
+					$('#mobile_drop a[href="#database"]').tab('show');
 					console.log("database: ");
 					break;
 					
 				case "/search/r":
 				case "/search/p":
 					$('#desktop_tabs a[href="#reserves"]').tab('show');
-					$('#mobile_tabs a[href="#reserves"]').tab('show');
+					$('#mobile_drop a[href="#reserves"]').tab('show');
 					break;
 
 				case "/search/c":
@@ -1378,13 +1366,13 @@ $(".mobile-navigation").on('change', function(e){
 				case "/search/i":
 				case "/search/o":
 					$('#desktop_tabs a[href="#numbers"]').tab('show');
-					$('#mobile_tabs a[href="#numbers"]').tab('show');
+					$('#mobile_drop a[href="#numbers"]').tab('show');
 					console.log("numbers: ");
 					break;
 
 				default:
 					$('#desktop_tabs a[href="#keyword"]').tab('show');
-					$('#mobile_tabs a[href="#keyword"]').tab('show');
+					$('#mobile_drop a[href="#keyword"]').tab('show');
 					console.log("defaulted to keyword: ");
 			}
 		});		
