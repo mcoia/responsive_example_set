@@ -50,10 +50,10 @@ $(".mobile-navigation").on('change', function(e){
 	
 		<div class="visible-lg visible-md">
 			<ul id="desktop_tabs" class="nav nav-tabs" data-tabs="tabs">
-				<li id="tab-keyword" class="active"><a href="#keyword" data-toggle="tab">Keyword</a></li>
+				<li id="tab-keyword"><a href="#keyword" data-toggle="tab">Keyword</a></li>
 				<li id="tab-advanced"><a href="#advanced" data-toggle="tab">Advanced Search</a></li>
 				<li id="tab-title"><a href="#title" data-toggle="tab">Title</a></li>
-				<li id="tab-author"><a href="#author" data-toggle="tab">Author</a></li>
+				<li id="tab-author" class="active"><a href="#author" data-toggle="tab">Author</a></li>
 				<li id="tab-subject"><a href="#subject" data-toggle="tab">Subject</a></li>
 				<!-- <li id="tab-journal"><a href="#journal" data-toggle="tab">Journal</a></li> -->
 				<!--<li id="tab-database"><a href="#database" data-toggle="tab">Database</a></li>-->				
@@ -78,7 +78,7 @@ $(".mobile-navigation").on('change', function(e){
 		
 		<div id="my-tab-content" class="tab-content">
 
-			<div class="tab-pane active" id="keyword">
+			<div class="tab-pane" id="keyword">
 				<!-- 				<h1>Keyword</h1>
 				<p>Keyword Keyword Keyword Keyword Keyword Keyword Keyword Keyword Keyword Keyword </p> -->
 				
@@ -495,7 +495,7 @@ $(".mobile-navigation").on('change', function(e){
 
 			</div><!-- /title search tab -->
 
-		<div class="tab-pane" id="author">
+		<div class="tab-pane active" id="author">
 				<!-- <h1>Author</h1>
 				<p>Author Author Author Author Author Author Author Author Author Author Author Author </p> -->
 
@@ -599,6 +599,96 @@ $(".mobile-navigation").on('change', function(e){
 							<li>Children's Rights</li>
 							<li>Motion Picture</li>
 							<li>United States History Civil War, 1861-1865</li>
+						</ul>
+					</div>
+				</div>
+				
+			</form>
+
+			<hr>
+
+			<form class="form-horizontal" role="form" action="/search/j" method="get">
+
+				<span class="help-block">Enter Search Terms For <strong>Medical Subject</strong></span>
+			
+				<div class="form-group">
+					<label for="input_subject" class="col-md-1 control-label">Medical Subject: </label>
+					<div class="col-md-8">
+						<input name="SEARCH" type="text" class="form-control" id="input_subject" placeholder="Enter Medical Subject">
+					</div>
+					
+					<div class="col-md-3">
+						<select name="sortdropdown" id="sortdropdown_medsubject" class="form-control">
+							<option value="-">System Sorted</option> 
+							<option value="t"> Title</option> 
+							<option value="a"> Author</option> 
+							<option value="c"> Year</option> 
+							<option value="r"> Reverse Year</option> 
+							<option value="n"> Call Number</option> 
+							<option value="m"> Material Type</option> 
+						</select>
+					</div>
+					
+				</div>
+											
+				<div class="form-group">
+					<div class="col-md-offset-1 col-md-11">
+						<button name="SUBMIT" type="submit" class="btn btn-default">Search</button>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-offset-1 col-md-11">
+						Examples:
+						<ul>
+							<li>lung neoplasms</li>
+							<li>animals, laboratory</li>
+							<li>heart anatomy</li>
+						</ul>
+					</div>
+				</div>
+				
+			</form>
+
+			<hr>
+
+						<form class="form-horizontal" role="form" action="/search/j" method="get">
+
+				<span class="help-block">Enter Search Terms For <strong>Children's Subject</strong></span>
+			
+				<div class="form-group">
+					<label for="input_subject" class="col-md-1 control-label">Children's Subject: </label>
+					<div class="col-md-8">
+						<input name="SEARCH" type="text" class="form-control" id="input_subject" placeholder="Enter Children's Subject">
+					</div>
+					
+					<div class="col-md-3">
+						<select name="sortdropdown" id="sortdropdown_childsubject" class="form-control">
+							<option value="-">System Sorted</option> 
+							<option value="t"> Title</option> 
+							<option value="a"> Author</option> 
+							<option value="c"> Year</option> 
+							<option value="r"> Reverse Year</option> 
+							<option value="n"> Call Number</option> 
+							<option value="m"> Material Type</option> 
+						</select>
+					</div>
+					
+				</div>
+											
+				<div class="form-group">
+					<div class="col-md-offset-1 col-md-11">
+						<button name="SUBMIT" type="submit" class="btn btn-default">Search</button>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-offset-1 col-md-11">
+						Examples:
+						<ul>
+							<li>picture book</li>
+							<li>Baseball fiction</li>
+							<li>Family Life</li>
 						</ul>
 					</div>
 				</div>
@@ -1352,6 +1442,8 @@ $(".mobile-navigation").on('change', function(e){
 					break;
 					
 				case "/search/d":
+				case "/search/j":
+				case "/search/m":
 					$('#desktop_tabs a[href="#subject"]').tab('show');
 					$('#mobile_drop a[href="#subject"]').tab('show');
 					console.log("subject: ");
