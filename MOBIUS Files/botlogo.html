@@ -35,7 +35,11 @@
 		<link rel="shortcut icon" type="ximage/icon" href="/screens/favicon.ico" />
 
 <script type="text/javascript">
+$( "#desktop_tabs" ).click(function() {
+	 setTimeout(function() {
     	var tab = $("#desktop_tabs li.active").attr('id').split('tab-')[1];
 		$('#mobile_drop option[value="#' + tab + '"]').prop("selected", "selected");
+	}, 10);
+});
 </script>
 		<!-- end botlogo.html file -->
