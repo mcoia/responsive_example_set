@@ -553,7 +553,7 @@ $(".mobile-navigation").on('change', function(e){
 
 			</div><!-- /author search tab -->	
 			
-						<div class="tab-pane active" id="subject">
+						<div class="tab-pane" id="subject">
 				<!-- <h1>Subject</h1>
 				<p>Subject Subject Subject Subject Subject Subject Subject Subject Subject Subject</p> -->
 			
@@ -1154,7 +1154,7 @@ $(".mobile-navigation").on('change', function(e){
 			<!-- /reserves search tab -->
 			
 			
-			<div class="tab-pane  active" id="numbers">
+			<div class="tab-pane active" id="numbers">
 				<!-- <h1>Numbers</h1>
 				<p>Numbers Numbers Numbers Numbers Numbers Numbers Numbers Numbers Numbers Numbers Numbers </p> -->
 
@@ -1164,12 +1164,12 @@ $(".mobile-navigation").on('change', function(e){
 		
 			<form class="form-horizontal" role="form" action="/search/c" method="get">
 
-				<span class="help-block">Enter Search Terms For <strong>Call Number</strong></span>
+				<span class="help-block">Enter Search Terms For <strong>Library of Congress  Call Number</strong></span>
 			
 				<div class="form-group">
-					<label for="input_call_number" class="col-md-1 control-label">Call Number: </label>
+					<label for="input_call_number" class="col-md-1 control-label">LC Call Number: </label>
 					<div class="col-md-8">
-						<input id="input_call_number" type="text" name="SEARCH" value="" class="form-control" placeholder="Enter Call Number">
+						<input id="input_call_number" type="text" name="SEARCH" value="" class="form-control" placeholder="Enter LC Call Number">
 					</div>
 					
 					<div class="col-md-3">
@@ -1199,6 +1199,50 @@ $(".mobile-navigation").on('change', function(e){
 							<li>PR6051.D3352 H57 1981</li>
 							<li>PR 2803</li>
 							<li>QA75</li>
+						</ul>
+					</div>
+				</div>
+				
+			</form>
+			
+			<hr>
+
+			<form class="form-horizontal" role="form" action="/search/e" method="get">
+
+				<span class="help-block">Enter Search Terms For <strong>Dewey Call Number</strong></span>
+			
+				<div class="form-group">
+					<label for="input_call_number" class="col-md-1 control-label">Dewey Call Number: </label>
+					<div class="col-md-8">
+						<input id="input_call_number" type="text" name="SEARCH" value="" class="form-control" placeholder="Enter Dewey Call Number">
+					</div>
+					
+					<div class="col-md-3">
+						<select name="sortdropdown" id="sortdropdown_dewey_number" class="form-control">
+							<option value="-">System Sorted</option> 
+							<option value="t"> Title</option> 
+							<option value="a"> Author</option> 
+							<option value="c"> Year</option> 
+							<option value="r"> Reverse Year</option> 
+							<option value="n"> Call Number</option> 
+							<option value="m"> Material Type</option> 
+						</select>
+					</div>
+					
+				</div>
+											
+				<div class="form-group">
+					<div class="col-md-offset-1 col-md-11">
+						<button name="SUBMIT" type="submit" class="btn btn-default">Search</button>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-offset-1 col-md-11">
+						Examples:
+						<ul>
+							<li>641.6 Ala</li>
+							<li>641</li>
 						</ul>
 					</div>
 				</div>
@@ -1243,51 +1287,6 @@ $(".mobile-navigation").on('change', function(e){
 						<ul>
 							<li>NAS</li>
 							<li>NAS 1.2:AM 3/994</li>
-						</ul>
-					</div>
-				</div>
-				
-			</form>
-			
-			<hr>
-			
-			<form class="form-horizontal" role="form" action="/search/f" method="get">
-
-				<span class="help-block">Enter Search Terms For <strong>Local Call Number</strong></span>
-			
-				<div class="form-group">
-					<label for="input_local_call" class="col-md-1 control-label">Local Call Number: </label>
-					<div class="col-md-8">
-						<input id="input_local_call" type="text" name="SEARCH" value="" class="form-control" placeholder="Local Call Number">
-					</div>
-					
-					<div class="col-md-3">
-						<select name="sortdropdown" id="sortdropdown_local_call" class="form-control">
-							<option value="-">System Sorted</option> 
-							<option value="t"> Title</option> 
-							<option value="a"> Author</option> 
-							<option value="c"> Year</option> 
-							<option value="r"> Reverse Year</option> 
-							<option value="n"> Call Number</option> 
-							<option value="m"> Material Type</option> 
-						</select>
-					</div>
-					
-				</div>
-											
-				<div class="form-group">
-					<div class="col-md-offset-1 col-md-11">
-						<button name="SUBMIT" type="submit" class="btn btn-default">Search</button>
-					</div>
-				</div>
-
-				<div class="form-group">
-					<div class="col-md-offset-1 col-md-11">
-						Examples:
-						<ul>
-							<li>DAV</li>
-							<li>Australia Drawer 9</li>
-							<li>Blue</li>
 						</ul>
 					</div>
 				</div>
@@ -1381,8 +1380,53 @@ $(".mobile-navigation").on('change', function(e){
 					</div>
 				</div>
 				
-			</form>			
+			</form>	
+
+			<hr>
+
+			<form class="form-horizontal" role="form" action="/search/f" method="get">
+
+				<span class="help-block">Enter Search Terms For <strong>Local Call Number</strong></span>
 			
+				<div class="form-group">
+					<label for="input_local_call" class="col-md-1 control-label">Local Call Number: </label>
+					<div class="col-md-8">
+						<input id="input_local_call" type="text" name="SEARCH" value="" class="form-control" placeholder="Local Call Number">
+					</div>
+					
+					<div class="col-md-3">
+						<select name="sortdropdown" id="sortdropdown_local_call" class="form-control">
+							<option value="-">System Sorted</option> 
+							<option value="t"> Title</option> 
+							<option value="a"> Author</option> 
+							<option value="c"> Year</option> 
+							<option value="r"> Reverse Year</option> 
+							<option value="n"> Call Number</option> 
+							<option value="m"> Material Type</option> 
+						</select>
+					</div>
+					
+				</div>
+											
+				<div class="form-group">
+					<div class="col-md-offset-1 col-md-11">
+						<button name="SUBMIT" type="submit" class="btn btn-default">Search</button>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-offset-1 col-md-11">
+						Examples:
+						<ul>
+							<li>DAV</li>
+							<li>Australia Drawer 9</li>
+							<li>Blue</li>
+						</ul>
+					</div>
+				</div>
+				
+			</form>
+	
 			
 		<!--               -->
 		</div>
@@ -1465,6 +1509,7 @@ $(".mobile-navigation").on('change', function(e){
 				case "/search/f":
 				case "/search/i":
 				case "/search/o":
+				case "/search/e":
 					$('#desktop_tabs a[href="#numbers"]').tab('show');
 					$('#mobile_drop a[href="#numbers"]').tab('show');
 					console.log("numbers: ");
