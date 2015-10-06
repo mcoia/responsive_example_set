@@ -1447,11 +1447,11 @@
 			});
 		});
 		
-		$(document).ready(function() {
+$(document).ready(function() {
 			switch (location.pathname) {
 				case "/":
 					$('#desktop_tabs a[href="#keyword"]').tab('show');
-					$('#mobile_drop a[href="#keyword"]').tab('show');
+					$('#mobile_drop option[value="#keyword"]').prop("selected", "selected");
 					console.log("keyword: ");
 					break;
 
@@ -1459,7 +1459,7 @@
 				case "/search/":
 				case "/search":
 					$('#desktop_tabs a[href="#advanced"]').tab('show');
-					$('#mobile_drop a[href="#advanced"]').tab('show');
+					$('#mobile_drop option[value="#advanced"]').prop("selected", "selected");
 					console.log("advanced: ");
 					break;
 				
@@ -1467,7 +1467,7 @@
 				case "/search/t":
 				//case "/search/j":
 					$('#desktop_tabs a[href="#title"]').tab('show');
-					$('#mobile_drop a[href="#title"]').tab('show');
+					$('#mobile_drop option[value="#title"]').prop("selected", "selected");
 					console.log("title:");
 					break;
 
@@ -1475,7 +1475,7 @@
 				//case "/search/t":
 				//case "/search/j":
 					$('#desktop_tabs a[href="#author"]').tab('show');
-					$('#mobile_drop a[href="#author"]').tab('show');
+					$('#mobile_drop option[value="#author"]').prop("selected", "selected");
 					console.log("author: ");
 					break;
 					
@@ -1483,13 +1483,13 @@
 				case "/search/j":
 				case "/search/m":
 					$('#desktop_tabs a[href="#subject"]').tab('show');
-					$('#mobile_drop a[href="#subject"]').tab('show');
+					$('#mobile_drop option[value="#subject"]').prop("selected", "selected");
 					console.log("subject: ");
 					break;
 					
 				case "/search/y":
 					$('#desktop_tabs a[href="#database"]').tab('show');
-					$('#mobile_drop a[href="#database"]').tab('show');
+					$('#mobile_drop option[value="#database"]').prop("selected", "selected");
 					console.log("database: ");
 					break;
 					
@@ -1497,7 +1497,7 @@
 				case "/search/p":
 				case "/search/b":
 					$('#desktop_tabs a[href="#reserves"]').tab('show');
-					$('#mobile_drop a[href="#reserves"]').tab('show');
+					$('#mobile_drop option[value="#reserves"]').prop("selected", "selected");
 					break;
 
 				case "/search/c":
@@ -1508,15 +1508,15 @@
 				case "/search/e":
 				case "/search/n":
 					$('#desktop_tabs a[href="#numbers"]').tab('show');
-					$('#mobile_drop a[href="#numbers"]').tab('show');
+					$('#mobile_drop option[value="#numbers"]').prop("selected", "selected");
 					console.log("numbers: ");
 					break;
 
 				default:
 					$('#desktop_tabs a[href="#keyword"]').tab('show');
-					$('#mobile_drop a[href="#keyword"]').tab('show');
+					$('#mobile_drop option[value="#keyword"]').prop("selected", "selected");
 					console.log("defaulted to keyword: ");
-			}
+			} 
 		});		
 	</script>
 	
