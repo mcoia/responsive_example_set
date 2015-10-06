@@ -58,7 +58,7 @@ $(".mobile-navigation").on('change', function(e){
 				<!-- <li id="tab-journal"><a href="#journal" data-toggle="tab">Journal</a></li> -->
 				<!--<li id="tab-database"><a href="#database" data-toggle="tab">Database</a></li>-->				
 				<li id="tab-numbers"><a href="#numbers" data-toggle="tab">Number</a></li>
-				<!--<li id="tab-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>-->
+				<li id="tab-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>
 			</ul>
 		</div>
 		<div class="visible-sm visible-xs mobile dropdown">
@@ -72,7 +72,7 @@ $(".mobile-navigation").on('change', function(e){
 				<!-- <li id="mobile_journal"><a href="#journal" data-toggle="tab">Journal</a></li> -->
 				<!--<li id="mobile_database"><a href="#database" data-toggle="tab">Database</a></li>-->
 				<option id="mobile_numbers" value="#numbers">Number</option>
-				<!--<li id="mobile_reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>-->
+				<li id="mobile_reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>
 			</select>
 		</div>
 		
@@ -1457,6 +1457,7 @@ $(".mobile-navigation").on('change', function(e){
 					
 				case "/search/r":
 				case "/search/p":
+				case "/search/b":
 					$('#desktop_tabs a[href="#reserves"]').tab('show');
 					$('#mobile_drop a[href="#reserves"]').tab('show');
 					break;
