@@ -58,7 +58,7 @@ $(".mobile-navigation").on('change', function(e){
 				<!-- <li id="tab-journal"><a href="#journal" data-toggle="tab">Journal</a></li> -->
 				<!--<li id="tab-database"><a href="#database" data-toggle="tab">Database</a></li>-->				
 				<li id="tab-numbers" class="active"><a href="#numbers" data-toggle="tab">Number</a></li>
-				<!--<li id="tab-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>-->
+				<li id="tab-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>
 			</ul>
 		</div>
 		<div class="visible-sm visible-xs mobile dropdown">
@@ -69,10 +69,10 @@ $(".mobile-navigation").on('change', function(e){
 				<option id="mobile_title" value="#title">Title</option>
 				<option id="mobile_author" value="#author">Author</option>
 				<option id="mobile_subject" value="#subject">Subject</option>
-				<!-- <li id="pill-journal"><a href="#journal" data-toggle="tab">Journal</a></li> -->
-				<!--<li id="pill-database"><a href="#database" data-toggle="tab">Database</a></li>-->
+				<!-- <option id="mobile_journal" value="#journal">Journal</option> -->
+				<!--<option id="mobile_database" value="#database">Database</option>-->
 				<option id="mobile_numbers" value="#numbers">Number</option>
-				<!--<li id="pill-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>-->
+				<option id="mobile_reserves" value="#reserves">Reserve</option>
 			</select>
 		</div>
 		
@@ -553,7 +553,8 @@ $(".mobile-navigation").on('change', function(e){
 
 			</div><!-- /author search tab -->	
 			
-						<div class="tab-pane" id="subject">
+			
+			<div class="tab-pane" id="subject">
 				<!-- <h1>Subject</h1>
 				<p>Subject Subject Subject Subject Subject Subject Subject Subject Subject Subject</p> -->
 			
@@ -1295,6 +1296,51 @@ $(".mobile-navigation").on('change', function(e){
 			
 			<hr>
 			
+			<form class="form-horizontal" role="form" action="/search/f" method="get">
+
+				<span class="help-block">Enter Search Terms For <strong>Local Call Number</strong></span>
+			
+				<div class="form-group">
+					<label for="input_local_call" class="col-md-1 control-label">Local Call Number: </label>
+					<div class="col-md-8">
+						<input id="input_local_call" type="text" name="SEARCH" value="" class="form-control" placeholder="Local Call Number">
+					</div>
+					
+					<div class="col-md-3">
+						<select name="sortdropdown" id="sortdropdown_local_call" class="form-control">
+							<option value="-">System Sorted</option> 
+							<option value="t"> Title</option> 
+							<option value="a"> Author</option> 
+							<option value="c"> Year</option> 
+							<option value="r"> Reverse Year</option> 
+							<option value="n"> Call Number</option> 
+							<option value="m"> Material Type</option> 
+						</select>
+					</div>
+					
+				</div>
+											
+				<div class="form-group">
+					<div class="col-md-offset-1 col-md-11">
+						<button name="SUBMIT" type="submit" class="btn btn-default">Search</button>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-offset-1 col-md-11">
+						Examples:
+						<ul>
+							<li>DAV</li>
+							<li>Australia Drawer 9</li>
+							<li>Blue</li>
+						</ul>
+					</div>
+				</div>
+				
+			</form>
+			
+			<hr>
+			
 			<form class="form-horizontal" role="form" action="/search/i" method="get">
 
 				<span class="help-block">Enter Search Terms For <strong>ISBN</strong> or <strong>ISSN</strong></span>
@@ -1500,6 +1546,7 @@ $(".mobile-navigation").on('change', function(e){
 					
 				case "/search/r":
 				case "/search/p":
+				case "/search/b":
 					$('#desktop_tabs a[href="#reserves"]').tab('show');
 					$('#mobile_drop a[href="#reserves"]').tab('show');
 					break;
@@ -1510,6 +1557,7 @@ $(".mobile-navigation").on('change', function(e){
 				case "/search/i":
 				case "/search/o":
 				case "/search/e":
+				case "/search/n":
 					$('#desktop_tabs a[href="#numbers"]').tab('show');
 					$('#mobile_drop a[href="#numbers"]').tab('show');
 					console.log("numbers: ");
