@@ -3,16 +3,7 @@
 	<head>
 <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"> <!-- Bootstrap --> <link href="/screens/bootstrap.min.css" rel="stylesheet"> <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> <script src="/screens/jquery.min.js"></script> <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"><!-- Custom CSS --> <link href="/screens/custom.css" rel="stylesheet"> <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
 <title>MOBIUS Catalog</title>
-<script type="text/javascript">
-$("#selectNavigation").on('change', function(e){
-	window.location = this.value;
-});
-
-$(".mobile-navigation").on('change', function(e){
-	if (this.value !== ""){
-		window.location = this.value;
-	}
-});</script>
+ 
 	</head>
 	<body>
 <!--{toplogo}-->
@@ -392,7 +383,8 @@ $(".mobile-navigation").on('change', function(e){
 		</form>
 		</div> <!-- /advancedsearchformbegin token-->
 		
-		<script type="text/javascript">
+<!-- <script type="text/javascript">
+	//took out flyer's code to make our dropdown menu work
 			$(document).ready(function() {
 				//change advanced search tab to direct link 
 				//	:do this only if we're NOT on the advanced search page
@@ -425,7 +417,7 @@ $(".mobile-navigation").on('change', function(e){
 					fill_options('l', 'l_target');
 				}	
 			});
-		</script>
+		</script>-->
 		
 		
 		<!--                 -->

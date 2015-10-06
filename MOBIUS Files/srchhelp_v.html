@@ -391,15 +391,16 @@ please see document_map.html for directions.
 		</form>
 		</div> <!-- /advancedsearchformbegin token-->
 		
-		<script type="text/javascript">
+<!-- <script type="text/javascript">
+	//took out flyer's code to make our dropdown menu work
 			$(document).ready(function() {
 				//change advanced search tab to direct link 
 				//	:do this only if we're NOT on the advanced search page
 				if ( (location.pathname != '/search/X') && (location.pathname != '/search/') && (location.pathname != '/search') ) {
 					document.getElementById('tab-advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
-					document.getElementById('pill-advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
+					//document.getElementById('mobile_advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
 					document.getElementById('tab-advanced').getElementsByTagName('a')[0].href='/search/X';
-					document.getElementById('pill-advanced').getElementsByTagName('a')[0].href='/search/X';
+					document.getElementById('mobile_advanced').getElementsByTagName('a')[0].href='/search/X';
 				}
 				//do this if we're on the advanced search page
 				else {
@@ -424,7 +425,7 @@ please see document_map.html for directions.
 					fill_options('l', 'l_target');
 				}	
 			});
-		</script>
+		</script>-->
 		
 		
 		<!--                 -->
