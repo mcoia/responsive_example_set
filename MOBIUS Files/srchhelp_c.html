@@ -58,7 +58,7 @@
 			<label for="selectNavigation" class="float-left">Search Type:</label>
 			<select name="selectNavigation" id="mobile_drop" type="button" data-toggle="dropdown" class="mobile form-control btn btn-primary dropdown-toggle" >
 				<option id="mobile_keyword" value="#keyword">Keyword</option>
-				<option id="mobile_advanced" value="#advanced">Advanced Search</option>
+				<option id="mobile_advanced" value="/search/X">Advanced Search</option>
 				<option id="mobile_title" value="#title">Title</option>
 				<option id="mobile_author" value="#author">Author</option>
 				<option id="mobile_subject" value="#subject">Subject</option>
@@ -386,7 +386,7 @@
 		</div> <!-- /advancedsearchformbegin token-->
 		
 <script type="text/javascript">
-	//took out flyer's code to make our dropdown menu work
+	 
 			$(document).ready(function() {
 				//change advanced search tab to direct link 
 				//	:do this only if we're NOT on the advanced search page
@@ -394,7 +394,7 @@
 					document.getElementById('tab-advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
 					//document.getElementById('mobile_advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
 					document.getElementById('tab-advanced').getElementsByTagName('a')[0].href='/search/X';
-					document.getElementById('mobile_advanced').getElementsByTagName('option').value='#advanced';
+					//document.getElementById('mobile_advanced').getElementsByTagName('option').value='#advanced';
 				}
 				//do this if we're on the advanced search page
 				else {
@@ -1588,7 +1588,7 @@ ead>
 			<label for="selectNavigation" class="float-left">Search Type:</label>
 			<select name="selectNavigation" id="mobile_drop" type="button" data-toggle="dropdown" class="mobile form-control btn btn-primary dropdown-toggle" >
 				<option id="mobile_keyword" value="#keyword">Keyword</option>
-				<option id="mobile_advanced" value="#advanced">Advanced Search</option>
+				<option id="mobile_advanced" value="/search/X">Advanced Search</option>
 				<option id="mobile_title" value="#title">Title</option>
 				<option id="mobile_author" value="#author">Author</option>
 				<option id="mobile_subject" value="#subject">Subject</option>
@@ -1923,7 +1923,7 @@ ead>
 					document.getElementById('tab-advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
 					//document.getElementById('mobile_advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
 					document.getElementById('tab-advanced').getElementsByTagName('a')[0].href='/search/X';
-					document.getElementById('mobile_advanced').getElementsByTagName('option').value='#advanced';
+					//document.getElementById('mobile_advanced').getElementsByTagName('option').value='#advanced';
 				}
 				//do this if we're on the advanced search page
 				else {
