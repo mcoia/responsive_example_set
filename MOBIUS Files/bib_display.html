@@ -25,32 +25,13 @@
 <!--{innreach}-->
 	<!--{innreach}-->	
 
+<a href="#here" name="smsbutton" id="smsbutton" onClick="showsms();return false;">
+    <div id="smsfeatures" class="btn btn-default catnav">
+        <i class="fa fa-mobile" style="font-size:150%"></i> Text call number
+    </div>
+</a>
 
-	<a href="#here" name=smsbutton id=smsbutton onClick="showsms();return false;">
-		<div style="display:none" id="smsfeatures" class="sms2me btn btn-default catnav">
-			<i class="fa fa-mobile" style="font-size:150%"></i> Text this to me
-		</div>
-	</a>
 		
-	<!-- collect author, title, callnumber, and issn -->
-	<div id="collect_author" style="display:none">
-		<!--{recordinfo:a}-->
-<!--{recordinfo:a}-->
-		<!--{recordinfo:a}-->
-	</div>
-	
-	<div id="collect_title" style="display:none">
-		<!--{recordinfo:t}-->
-<!--{recordinfo:t}-->
-		<!--{recordinfo:t}-->
-	</div>
-	
-	<div id="collect_issn" style="display:none">
-		<!--{recordinfo:i}-->
-<!--{recordinfo:i}-->
-		<!--{recordinfo:i}-->
-	</div>
-	
 </div>
 
 <div class="spacer">&nbsp;</div>
@@ -107,7 +88,7 @@
 <!--{ratings}-->
 </div>
 <!--{xif}-->
-	
+
 	</div>
 	<!-- /class="col-md-9" -->
 	
@@ -125,9 +106,9 @@
 		['ICON_BOOKCART_SAVED',], //remove from saved
 		['ICON_MYLISTS_SAVE',], //add to my lists
 		['ICON_MYLISTS_SAVE_TO_LIST',], //Add Marked to My Lists
-		['ICON_MYLISTS_RECORD'], //Add to My Lists
+		['ICON_MYLISTS_RECORD',], //Add to My Lists
 		['ICON_BUT_MARC_DISPLAY',], //marc display
-		['SMS2ME',], //text this to me
+		['smsfeatures',], //text this to me
 	];
 
 	//loop through the array of IDs and place the element into its cosponsoring array position [i][1]

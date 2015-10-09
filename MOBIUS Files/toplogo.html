@@ -1,13 +1,6 @@
 <!-- begin toplogo.html file -->
-<!-- Bootstrap -->
-<link href="/screens/bootstrap.min.css" rel="stylesheet">
-		
-<!-- font-awesome -->
-<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<!-- custom css -->
-<link href="/screens/custom.css" rel="stylesheet">
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<script type="text/javascript" src='/screens/sms.js'> </script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
  <script type="text/javascript">
 $("#selectNavigation").on('change', function(e){
@@ -19,7 +12,7 @@ $(".mobile-navigation").on('change', function(e){
 		window.location = this.value;
 	}
 });</script>
-<script type="text/javascript" src="/screens/bootstrap.min.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function () {
     	$("span:contains(WebPAC PRO)").hide(); //Hide the iii footer
@@ -182,7 +175,23 @@ $(document).ready(function () {
 		<!--               -->
 		</div>
 		<!-- /HEADER-->
+		<!-- MAIN PAGE BODY -->
 		
+		<!-- our container for site content and grid system -->
+		<div class="container-fluid">
+		<div class="row" style="
+		padding-top:15px;
+		">
+					<div class="col-md-12">
+				<div id="patron_links">
+				<!-- patron -->
+<!--{patron}-->
+				<!-- /patron -->
+				</div>
+			
+			<!-- BODY AREA -->
+			<div id="BODY_AREA">
+			<!--           -->
 		
 		<!--Testing<span class="visible-xs">visible-xs</span>
 		<span class="visible-sm">visible-sm</span>

@@ -56,15 +56,15 @@ ICON_CLEAR_ALL=<div onmousedown="this.className='pressedState';" onmouseout="thi
 ICON_CLEAR_FORM=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_CLEAR_FORM btn btn-default catnav"> Clear Form </div></div>
 ICON_DELETE_SELECTED=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_DELETE_SELECTED btn btn-default catnav"> Delete Selected </div></div>
 ICON_SELECT_ALL=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_SELECT_ALL btn btn-default catnav"> Save All </div></div>
-#RESOURCETABLE=valign="top"|cellpadding="0" cellspacing="0" border="0"||Resources
-INSERTTAG_INHEAD=<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print"><script type="text/javascript" src="/screens/bibdisplay.js"></script>
+RESOURCETABLE=
+INSERTTAG_INHEAD=<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"> <!-- Bootstrap --> <link href="/screens/bootstrap.min.css" rel="stylesheet"> <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"><!-- Custom CSS --> <link href="/screens/custom.css" rel="stylesheet"> <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
 INSERTTAG_HTML=<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en">
 RIGHT_CELL_WIDTH=18|25
 SSLPORT=80:443|2082:444
 CUSTOM_MESSAGES=F
 STARTOVER=/search
 STATGROUP=login
-STYLESHEET=/screens/styles.css
+STYLESHEET=
 SUPPRESS_OPTION=STARTOVER,ANOTHER,NEWSRCH
 TIMEOUT=300;URL=/search/
 TOPLOGO=@screens/toplogo.html
@@ -188,23 +188,23 @@ HOLDINGS_POS=atpe
 ICON_BIB_HOLDINGS_ITEMS=View Copies
 #ICON_NEARBY=<div class="ICON_NEARBY btn btn-default catnav"> Nearby Items </div>
 ICON_BIB_PAGING_CAPTION= 
-ICON_BIB_PAGING_NEXT=<div class="ICON_BIB_PAGING_NEXT btn btn-default catnav">Next Record<i class="fa fa-long-arrow-right fa-sm"></i></div>
+ICON_BIB_PAGING_NEXT=<div class="ICON_BIB_PAGING_NEXT btn btn-default catnav">Next Record <i class="fa fa-long-arrow-right fa-sm"></i></div>
 ICON_BIB_PAGING_PREV=<div class="ICON_BIB_PAGING_PREV btn btn-default catnav"><i class="fa fa-long-arrow-left fa-sm"></i> Previous Record </div>
 ICON_RECORDLINK=<div class="ICON_RECORDLINK" style="font-weight:700";><a href="%s"> Permanent Link </a></div>
 LINK856TEXT=Connect to
 MARC=yes
 SHOWOREC=no_cdate
-TABLEPARAM_BIB=width="100%" cellpadding="0" cellspacing="0" border="0"|cellpadding="0" cellspacing="0" border="0" align="center"
-TABLEPARAM_BIB_DETAIL=id="bib_detail" width="100%" border="0" cellspacing="0" cellpadding="0"
-TABLEPARAM_BIB_HOLDINGS=width="100%" cellspacing="0" cellpadding="0"
-TABLEPARAM_BIB_HOLDS=width="100%" cellspacing="0" cellpadding="0"
-TABLEPARAM_BIB_INFO=width="100%" border="0" cellspacing="0" cellpadding="0"
-TABLEPARAM_BIB_ITEMS=id="bib_items" width="100%" border="0" cellspacing="0" cellpadding="0"
-TABLEPARAM_BIB_LINKS=width="100%" border="0" cellspacing="0" cellpadding="0"
-TABLEPARAM_BIB_ORDER=width="100%" cellspacing="0" cellpadding="0"
-TABLEPARAM_BIB_PAGER=border="0"
-TABLEPARAM_BIB_THUMBNAILS=align="center" cellspacing="0" cellpadding="0"
-TABLEPARAM_BIB_TOC=border="0" cellspacing="0"
+TABLEPARAM_BIB=class="table TABLEPARAM_BIB"
+TABLEPARAM_BIB_DETAIL=class="table TABLEPARAM_BIB_DETAIL"
+TABLEPARAM_BIB_HOLDINGS=class="table TABLEPARAM_BIB_HOLDINGS"
+TABLEPARAM_BIB_HOLDS=class="table TABLEPARAM_BIB_HOLDS"
+TABLEPARAM_BIB_INFO=class="table TABLEPARAM_BIB_INFO"
+TABLEPARAM_BIB_ITEMS=class="table table-striped TABLEPARAM_BIB_ITEMS"
+TABLEPARAM_BIB_LINKS=class="table TABLEPARAM_BIB_LINKS"
+TABLEPARAM_BIB_ORDER=class="table TABLEPARAM_BIB_ORDER"
+TABLEPARAM_BIB_PAGER=class="table TABLEPARAM_BIB_PAGER"
+TABLEPARAM_BIB_THUMBNAILS=class="table TABLEPARAM_BIB_THUMBNAILS"
+TABLEPARAM_BIB_TOC=class="table TABLEPARAM_BIB_TOC"
 #WEBPUBDEF=true
 
 # Electronic Resource Management
