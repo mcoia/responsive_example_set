@@ -296,7 +296,7 @@ ICON_BUT_PAT_RENEWALL=<div onmousedown="this.className='pressedState';" onmouseo
 ICON_BUT_PAT_RENEWMARK=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_BUT_PAT_RENEWMARK btn btn-default catnav"> Renew Marked </div></div>
 ICON_BUT_PAT_SORTBYCHKOUT=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_BUT_PAT_SORTBYCHKOUT btn btn-default catnav"> Sort by Checkout </div></div>
 ICON_BUT_PAT_SORTBYDUE=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_BUT_PAT_SORTBYDUE btn btn-default catnav"> Sort by Due Date </div></div>
-ICON_BUT_PAT_SUBMIT=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2"> Submit </span></span></div></div>
+ICON_BUT_PAT_SUBMIT=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_PIN_RESET btn btn-default catnav"> Submit </div></div>
 ICON_BUT_PSTARTOVER=<div class="ICON_BUT_PAT_SUBMIT btn btn-default catnav"> Start Over </div>
 ICON_BUT_PLOGOUT=<div class="ICON_BUT_PLOGOUT btn btn-default catnav"> Return to My Account </div>
 ICON_BUT_RET2PREC=Return to My Account
