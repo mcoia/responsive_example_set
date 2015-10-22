@@ -299,7 +299,7 @@ ICON_BUT_PAT_SORTBYDUE=<div onmousedown="this.className='pressedState';" onmouse
 ICON_BUT_PAT_SUBMIT=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_PIN_RESET btn btn-default catnav"> Submit </div></div>
 ICON_BUT_PSTARTOVER=<div class="ICON_BUT_PAT_SUBMIT btn btn-default catnav"> Start Over </div>
 ICON_BUT_PLOGOUT=<div class="ICON_BUT_PLOGOUT btn btn-default catnav"> Return to My Account </div>
-ICON_BUT_RET2PREC=Return to My Account
+ICON_BUT_RET2PREC=<div class="ICON_BUT_RET2PREC btn btn-default catnav"> Return to My Account </div>
 ICON_BUT_UPDATE_HOLDS=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_BUT_UPDATE_HOLDS btn btn-default catnav"> Cancel Selected Items </div></div>
 CHANGE_HOLD_LOC=true
 #FREEZE_HOLDS=true
@@ -337,8 +337,8 @@ TABLEPARAM_PATFUNC=border="0"|border="0"|border="0"
 #TIMEOUT_POPUP=600
 
 # My Millennium
-ICON_BUT_LOGOUT=Log Out
-ICON_BUT_PAT_PSEARCH_REMOVE=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2"> Delete All Searches </span></span></div></div>
+ICON_BUT_LOGOUT=<div class="ICON_BUT_LOGOUT btn btn-default catnav"> Log Out </div>
+ICON_BUT_PAT_PSEARCH_REMOVE=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_BUT_PAT_PSEARCH_REMOVE btn btn-default catnav"> Delete All Searches </div></div>
 BUT_PAT_PSEARCH_UPDATE=<div class="BUT_PAT_PSEARCH_UPDATE btn btn-default catnav">Update List</div>
 ICON_BUT_PAT_PSEARCH_UPDATE=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_BUT_PAT_PSEARCH_UPDATE btn btn-default catnav"> Update List </div></div>
 BUT_PAT_SEARCH=<div class="BUT_PAT_SEARCH btn btn-default catnav"> Search the Catalog </div>
@@ -383,8 +383,8 @@ PREFTEXT=Save as preferred search
 READING_HISTORY=optin|true|
 TOPLOGO_LOGGEDIN=T
 
-# Patron Ratings
-ICON_PATRATE=<span class="button"><img src="/screens/patrate.gif" alt=""><span class="buttonText">My Ratings</span></span>
+# Patron Ratings   
+ICON_PATRATE=<div class="ICON_PATRATE btn btn-default catnav"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> My Ratings </div>
 ICON_RATE_GROUP=<img src="/screens/rate_group.gif" border="0" width="15" height="14" alt="Rated %d stars out of 5 based on %n ratings" title="Rated %d stars out of 5 based on %n ratings">
 ICON_RATE_MY=<img src="/screens/rate_my.gif" border="0" width="15" height="14" alt="You rated this %d stars out of 5" title="You rated this %d stars out of 5">
 ICON_RATE_NEED=<img src="/screens/rate_need.gif" border="0" width="15" height="14" alt="Rate this material!" title="Rate this material!">
