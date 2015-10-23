@@ -1448,6 +1448,7 @@
 $(document).ready(function() {
 			switch (location.pathname) {
 				case "/":
+				case "/search/w":
 					$('#desktop_tabs a[href="#keyword"]').tab('show');
 					$('#mobile_drop option[value="#keyword"]').prop("selected", "selected");
 					console.log("keyword: ");
@@ -1463,7 +1464,7 @@ $(document).ready(function() {
 				
 				//case "/search/a":
 				case "/search/t":
-				//case "/search/j":
+				case "/search/s":
 					$('#desktop_tabs a[href="#title"]').tab('show');
 					$('#mobile_drop option[value="#title"]').prop("selected", "selected");
 					console.log("title:");
