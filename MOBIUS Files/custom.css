@@ -58,6 +58,16 @@ body{
 	background-image: url('mobius.png');			
 }
 
+.mobile_logo_right {
+	/*background-image: url("img/logo-mobile.png");*/
+	background-image: url('culverstockton.gif');			
+}
+
+.mobile_logo_left {
+	/*background-image: url("img/logo-mobile.png");*/
+	background-image: url('lance.png');			
+}
+
 a.header_link  a.header_link:link{
 	color:#0096a7;
 	text-decoration:none;
