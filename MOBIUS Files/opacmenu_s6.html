@@ -416,42 +416,7 @@ document.onkeydown =
 		</form>
 		</div> <!-- /advancedsearchformbegin token-->
 		
-<script type="text/javascript">
-	 
-			$(document).ready(function() {
-				//change advanced search tab to direct link 
-				//	:do this only if we're NOT on the advanced search page
-				if ( (location.pathname != '/search/X') && (location.pathname != '/search/') && (location.pathname != '/search') ) {
-					document.getElementById('tab-advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
-					//document.getElementById('mobile_advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
-					document.getElementById('tab-advanced').getElementsByTagName('a')[0].href='/search/X';
-					//document.getElementById('mobile_advanced').getElementsByTagName('option').value='#advanced';
-				}
-				//do this if we're on the advanced search page
-				else {
-					//needed to style the form element for bootstrap
-					document.getElementById('advancedsearchformbegin').getElementsByTagName('form')[0].className = "form-horizontal";
-					document.getElementById('advancedsearchformbegin').getElementsByTagName('form')[0].roleName = "form";
-					
-					function fill_options(source, target) {
-						var source_options = document.getElementById(source);
-						var target_options = document.getElementById(target);
 
-						for (var i=0; i<source_options.length; i++) {
-							var option = document.createElement('option');
-							option.text = source_options[i].text;
-							option.value = source_options[i].value;
-							target_options.add(option, target_options[i]);
-						}
-					}
-					
-					fill_options('b', 'b_target');
-					fill_options('m', 'm_target');
-					fill_options('l', 'l_target');
-				}	
-			});
-		</script>
-		
 		
 		<!--                 -->
 		</div>
