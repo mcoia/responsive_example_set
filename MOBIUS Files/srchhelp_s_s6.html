@@ -477,36 +477,24 @@ document.onkeydown =
 					</div>
 				</div>
 
-<form method="get">
-<span class="help-block">Enter Search Terms For <strong>Journal, Magazine & Newspaper Title</strong></span>
-      <fieldset>
-        <!-- Optional legend:
-        <legend>Type the call number you want to find, then press the Enter key or click Submit.</legend>
-        -->
+<hr>
 
-        <div class="formEntryArea">
+			<form class="form-horizontal" role="form" action="/search/s" method="get">
 
-          <!-- <span class="formLabel">
-            <label for="SEARCH">Search for:</label>
-          </span> -->
-<label for="SEARCH" style="display:none;">Search:</label><input type="text" id="SEARCH" name="SEARCH" size="48" value="" />
-        </div>
-
-        <div class="formButtonArea">
-<script type="text/JavaScript">
-
-function iiiDoSubmit_1()
-{
-//getFormHandleForm() is in common.js
-var obj = getFormHandleForm(1);
-obj.submit();
-}
-</script>
-<input type="hidden" id="iiiFormHandle_1"/>
-<a href="#" onclick="iiiDoSubmit_1();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Submit</span></span></div></div></a>
-
-
-
+				<span class="help-block">Enter Search Terms For <strong>Journal, Magazine & Newspaper Title</strong></span>
+			
+				<div class="form-group">
+					<label for="input_subject" class="col-md-1 control-label">Title: </label>
+					<div class="col-md-8">
+						<input name="SEARCH" type="text" class="form-control" id="input_subject" placeholder="Enter Journal Title">
+					</div>
+				</div>
+											
+				<div class="form-group">
+					<div class="col-md-offset-1 col-md-11">
+						<button name="SUBMIT" type="submit" class="btn btn-default">Search</button>
+					</div>
+					
 <script type="text/JavaScript">
 
 //getFormHandleForm() is in common.js
@@ -538,20 +526,21 @@ if (targ.form)
 };
 
 </script>
-        </div>
+				</div>
 
-      </fieldset>
-
-    </form>
-
-    <!-- Begin Search Help Text -->
-    <p>Type as much or as little of the <b>EXACT TITLE</b> as you want. For example:</p>
-    <ul>
-      <li> Journal of Counseling Psychology </li>
-      <li> Journal of Counseling Psy </li>
-      <li> Journal of the Philosophy of Sport </li>
-
-</form>
+				<div class="form-group">
+					<div class="col-md-offset-1 col-md-11">
+						Type as much or as little of the <strong>EXACT TITLE<strong> as you want. <br>
+						For example:
+						<ul>
+							<li>Journal of Counseling Psychology</li>
+							<li>Journal of Counseling Psy</li>
+							<li>Journal of the Philosophy of Sport</li>
+						</ul>
+					</div>
+				</div>
+				
+			</form>
 			
 		<!--               -->
 		</div>
