@@ -86,6 +86,7 @@ STAFF_LOGGEDIN_MSG=<span class="loggedInMessage"> You are logged into staff mode
 # General and Phrase Searching
 ICON_BUT_ANOTHER=<div style="display:none" class="ICON_BUT_ANOTHER btn btn-default catnav"><i class="fa fa-search fa-sm"></i> Another Search </div>
 ICON_BUT_NEWSRCH=<div class="ICON_BUT_NEWSRCH btn btn-default catnav"><i class="fa fa-undo fa-sm"></i> New Search </div>
+ICON_BUT_NEWSRCH6=<div class="ICON_BUT_NEWSRCH"><i class="fa fa-undo fa-sm"></i> New Search </div>
 ICON_BUT_WORDSRCH=<div class="ICON_BUT_WORDSRCH btn btn-default catnav"><i class="fa fa-search-plus fa-sm"></i> Search as Words </div>
 DROP_DOWN=Xatscegiofdjm
 FRAMEURL=0
@@ -304,6 +305,7 @@ ICON_BUT_PAT_SUBMIT=<div onmousedown="this.className='pressedState';" onmouseout
 ICON_BUT_PSTARTOVER=<div class="ICON_BUT_PAT_SUBMIT btn btn-default catnav"> Start Over </div>
 ICON_BUT_PLOGOUT=<div class="ICON_BUT_PLOGOUT btn btn-default catnav"> Return to My Account </div>
 ICON_BUT_RET2PREC=<div class="ICON_BUT_RET2PREC btn btn-default catnav"> Return to My Account </div>
+ICON_BUT_RET2PREC6=<div class="ICON_BUT_RET2PREC"> Return to My Account </div>
 ICON_BUT_UPDATE_HOLDS=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_BUT_UPDATE_HOLDS btn btn-default catnav"> Cancel Selected Items </div></div>
 CHANGE_HOLD_LOC=true
 #FREEZE_HOLDS=true
@@ -342,6 +344,7 @@ TABLEPARAM_PATFUNC=border="0"|border="0"|border="0"
 
 # My Millennium
 ICON_BUT_LOGOUT=<div class="ICON_BUT_LOGOUT btn btn-default catnav"> Log Out </div>
+ICON_BUT_LOGOUT6=<div class="ICON_BUT_LOGOUT"> Log Out </div>
 ICON_BUT_PAT_PSEARCH_REMOVE=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_BUT_PAT_PSEARCH_REMOVE btn btn-default catnav"> Delete All Searches </div></div>
 BUT_PAT_PSEARCH_UPDATE=<div class="BUT_PAT_PSEARCH_UPDATE btn btn-default catnav">Update List</div>
 ICON_BUT_PAT_PSEARCH_UPDATE=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_BUT_PAT_PSEARCH_UPDATE btn btn-default catnav"> Update List </div></div>
