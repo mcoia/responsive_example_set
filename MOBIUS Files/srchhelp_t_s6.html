@@ -125,7 +125,7 @@
 				
 			</div>			
 			
-			<div class="tab-pane" id="advanced">
+						<div class="tab-pane" id="advanced">
 				<!--<h1>Advanced</h1>
 				<p>Advanced Advanced Advanced Advanced Advanced Advanced Advanced Advanced Advanced </p> -->
 
@@ -156,37 +156,20 @@
 		
 		<!-- output any message from the server here -->
 	<!-- msg -->
+<!--{msg}-->
 	<!-- /msg -->
 	
 	<!-- innreach -->	
+<!--{innreach}-->	
 	<!-- innreach -->
 	
 	<!-- spellcheck -->
+<!--{spellcheck}-->
 	<!-- /spellcheck -->
 	
 		<div id="advancedsearchformbegin">
 		<!--advancedsearchformbegin-->
-<script type="text/javascript">
-
-//global variables below are set by webpac
-encode = "";
-savedScopeIndex = 7;
-//this func is created at runtime by webpac
-function AdvancedSearchForm_initLimits(ths, form)
-{
-
-ths.limitArray.lang = (form.elements["l"]) ? form.elements["l"] : "";
-ths.limitArray.mattype = (form.elements["m"]) ? form.elements["m"] : "";
-ths.limitArray.branch = (form.elements["b"]) ? form.elements["b"] : "";
-ths.limitArray.publish = (form.elements["p"]) ? form.elements["p"] : "";
-ths.limitArray.invnum = (form.elements["i"]) ? form.elements["i"] : "";
-ths.limitArray.accsprvdr = (form.elements["a"]) ? form.elements["a"] : "";
-}
-
-</script>
-<!-- FOR USE IN ADVANCED SEARCH PAGES (e.g.: srchhelp_X.html) ONLY -->
-<!-- FOR PHRASE SEARCH PAGES USE TOKEN: formbegin -->
-<form action="#" enctype="multipart/form-data: " name="search" id="search" onsubmit="return submitSearch(this, location.pathname, false);">
+<!--{advancedsearchformbegin}-->
 		<!--/advancedsearchformbegin-->
 		<!-- JavaScript below will modify the class for this form ... -->
 		
@@ -393,21 +376,7 @@ ths.limitArray.accsprvdr = (form.elements["a"]) ? form.elements["a"] : "";
 				<div class="col-md-12">
 					<div class="advancedsubmit">
 					<!--advancedsubmit-->
-<script  type="text/JavaScript">
-function iiiAdvSubmit()
-{
-obj = getObj("search");
-submitSearch(obj, location.pathname, false);
-}
-if (document.layers)
-  document.captureEvents(Event.KEYDOWN);
-document.onkeydown =
-  function (evt) {
-    var keyCode = evt ? (evt.which ? evt.which : evt.keyCode) : event.keyCode;
-    if (keyCode == 13) 
-      iiiAdvSubmit(); };
-</script>
-<a href="#" onclick="iiiAdvSubmit();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_SUBMIT btn btn-default catnav"> Submit </div></div></a>
+<!--{advancedsubmit}-->
 					<!--/advancedsubmit-->
 					</div>				
 				</div>
@@ -416,7 +385,41 @@ document.onkeydown =
 		</form>
 		</div> <!-- /advancedsearchformbegin token-->
 		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//change advanced search tab to direct link 
+				//	:do this only if we're NOT on the advanced search page
+				if ( (location.pathname != '/search/X') && (location.pathname != '/search/') && (location.pathname != '/search') ) {
+					document.getElementById('tab-advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
+					//document.getElementById('mobile_advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
+					document.getElementById('tab-advanced').getElementsByTagName('a')[0].href='/search/X';
+					//document.getElementById('mobile_advanced').getElementsByTagName('option').value='#advanced';
+				}
+				//do this if we're on the advanced search page
+				else {
+					//needed to style the form element for bootstrap
+					document.getElementById('advancedsearchformbegin').getElementsByTagName('form')[0].className = "form-horizontal";
+					document.getElementById('advancedsearchformbegin').getElementsByTagName('form')[0].roleName = "form";
+					
+					function fill_options(source, target) {
+						var source_options = document.getElementById(source);
+						var target_options = document.getElementById(target);
 
+						for (var i=0; i<source_options.length; i++) {
+							var option = document.createElement('option');
+							option.text = source_options[i].text;
+							option.value = source_options[i].value;
+							target_options.add(option, target_options[i]);
+						}
+					}
+					
+					fill_options('b', 'b_target');
+					fill_options('m', 'm_target');
+					fill_options('l', 'l_target');
+				}	
+			});
+		</script>
+		
 		
 		<!--                 -->
 		</div>
