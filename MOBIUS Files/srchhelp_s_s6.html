@@ -476,26 +476,26 @@ document.onkeydown =
 						</ul>
 					</div>
 				</div>
+				
+			</form>
+			<hr>
 
-<hr>
-
-			<form class="form-horizontal" role="form" action="/search/s" method="get">
+<form class="form-horizontal" role="form" action="/search/s" method="get">
 
 				<span class="help-block">Enter Search Terms For <strong>Journal, Magazine & Newspaper Title</strong></span>
 			
 				<div class="form-group">
-					<label for="input_subject" class="col-md-1 control-label">Title: </label>
+					<label for="input_title" class="col-md-1 control-label">Title: </label>
 					<div class="col-md-8">
-						<input name="SEARCH" type="text" class="form-control" id="input_subject" placeholder="Enter Journal Title">
+						<input name="SEARCH" type="text" class="form-control" id="input_subject" placeholder="Enter Medical Subject">
 					</div>
 				</div>
 											
 				<div class="form-group">
 					<div class="col-md-offset-1 col-md-11">
+					<input type="hidden" id="iiiFormHandle_1"/>
 						<button name="SUBMIT" type="submit" class="btn btn-default">Search</button>
-					</div>
-					
-<script type="text/JavaScript">
+						<script type="text/JavaScript">
 
 //getFormHandleForm() is in common.js
 var evtobj = getFormHandleForm(1);
@@ -526,20 +526,19 @@ if (targ.form)
 };
 
 </script>
+					</div>
 				</div>
 
 				<div class="form-group">
 					<div class="col-md-offset-1 col-md-11">
-						Type as much or as little of the <strong>EXACT TITLE<strong> as you want. <br>
+						Type as much or as little of the <b>EXACT TITLE</b> as you want. <br>
 						For example:
 						<ul>
-							<li>Journal of Counseling Psychology</li>
-							<li>Journal of Counseling Psy</li>
-							<li>Journal of the Philosophy of Sport</li>
-						</ul>
+							<li> journal of counseling psychology </li>
+							<li> journal of counseling psy </li>
+							<li> journal of the philosophy of sport </li>
 					</div>
 				</div>
-				
 			</form>
 			
 		<!--               -->
@@ -784,9 +783,6 @@ if (targ.form)
 							<option value="m"> Material Type</option> 
 						</select>
 					</div>
-					
-					<br>
-					<a class="btn btn-default" href="http://zw2sn2ud9v.search.serialssolutions.com/" role="button">JournalFinder</a>
 					
 				</div>
 											
