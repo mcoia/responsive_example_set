@@ -43,30 +43,24 @@
 	
 		<div class="visible-lg visible-md">
 			<ul id="desktop_tabs" class="nav nav-tabs" data-tabs="tabs">
-				<li id="tab-keyword"><a href="/search/k" data-toggle="tab">Keyword</a></li>
-				<li id="tab-author" class="active"><a href="/search/a" data-toggle="tab">Author</a></li>
-				<li id="tab-title"><a href="/search/t" data-toggle="tab">Title</a></li>
-				<li id="tab-subject"><a href="/search/d" data-toggle="tab">Subject</a></li>
-				<li id="tab-numbers"><a href="/search/c" data-toggle="tab">Number</a></li>				
-				<li id="tab-advanced"><a href="/search/x" data-toggle="tab">Advanced Search</a></li>
-				<!-- <li id="tab-journal"><a href="#journal" data-toggle="tab">Journal</a></li> -->
-				<!--<li id="tab-database"><a href="#database" data-toggle="tab">Database</a></li>-->
-				<!--<li id="tab-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>-->
+				<li id="tab-keyword"><a href="#keyword" data-toggle="tab">Keyword</a></li>
+				<li id="tab-author   active"><a href="#author" data-toggle="tab">Author</a></li>
+				<li id="tab-title"><a href="#title" data-toggle="tab">Title</a></li>
+				<li id="tab-subject"><a href="#subject" data-toggle="tab">Subject</a></li>
+				<li id="tab-numbers"><a href="#numbers" data-toggle="tab">Number</a></li>				
+				<li id="tab-advanced"><a href="#advanced" data-toggle="tab">Advanced Search</a></li>
 			</ul>
 		</div>
 		<div class="visible-sm visible-xs mobile dropdown">
 			<label for="selectNavigation" class="float-left">Search Type:</label>
 			<select name="selectNavigation" id="mobile_drop" type="button" data-toggle="dropdown" class="mobile form-control btn btn-primary dropdown-toggle" >
-				<option id="mobile_keyword" value="#keyword">Keyword</option>
-				<option id="mobile_author" value="#author">Author</option>
-				<option id="mobile_title" value="#title">Title</option>
-				<option id="mobile_subject" value="#subject">Subject</option>
-				<option id="mobile_numbers" value="#numbers">Number</option>
-				<option id="mobile_advanced" value="/search/X">Advanced Search</option>
-				<!-- <option id="mobile_journal" value="#journal">Journal</option> -->
-				<!--<option id="mobile_database" value="#database">Database</option>-->
-				<!--<option id="mobile_reserves" value="#reserves">Reserve</option>-->
-			</select>
+				<li id="tab-keyword"><a href="#keyword" data-toggle="tab">Keyword</a></li>
+				<li id="tab-author"><a href="#author" data-toggle="tab">Author</a></li>
+				<li id="tab-title"><a href="#title" data-toggle="tab">Title</a></li>
+				<li id="tab-subject"><a href="#subject" data-toggle="tab">Subject</a></li>
+				<li id="tab-numbers"><a href="#numbers" data-toggle="tab">Number</a></li>				
+				<li id="tab-advanced"><a href="#advanced" data-toggle="tab">Advanced Search</a></li>
+				</select>
 		</div>
 		
 		<div id="my-tab-content" class="tab-content">
@@ -156,37 +150,20 @@
 		
 		<!-- output any message from the server here -->
 	<!-- msg -->
+<!--{msg}-->
 	<!-- /msg -->
 	
 	<!-- innreach -->	
+<!--{innreach}-->	
 	<!-- innreach -->
 	
 	<!-- spellcheck -->
+<!--{spellcheck}-->
 	<!-- /spellcheck -->
 	
 		<div id="advancedsearchformbegin">
 		<!--advancedsearchformbegin-->
-<script type="text/javascript">
-
-//global variables below are set by webpac
-encode = "";
-savedScopeIndex = 7;
-//this func is created at runtime by webpac
-function AdvancedSearchForm_initLimits(ths, form)
-{
-
-ths.limitArray.lang = (form.elements["l"]) ? form.elements["l"] : "";
-ths.limitArray.mattype = (form.elements["m"]) ? form.elements["m"] : "";
-ths.limitArray.branch = (form.elements["b"]) ? form.elements["b"] : "";
-ths.limitArray.publish = (form.elements["p"]) ? form.elements["p"] : "";
-ths.limitArray.invnum = (form.elements["i"]) ? form.elements["i"] : "";
-ths.limitArray.accsprvdr = (form.elements["a"]) ? form.elements["a"] : "";
-}
-
-</script>
-<!-- FOR USE IN ADVANCED SEARCH PAGES (e.g.: srchhelp_X.html) ONLY -->
-<!-- FOR PHRASE SEARCH PAGES USE TOKEN: formbegin -->
-<form action="#" enctype="multipart/form-data: " name="search" id="search" onsubmit="return submitSearch(this, location.pathname, false);">
+<!--{advancedsearchformbegin}-->
 		<!--/advancedsearchformbegin-->
 		<!-- JavaScript below will modify the class for this form ... -->
 		
@@ -393,21 +370,7 @@ ths.limitArray.accsprvdr = (form.elements["a"]) ? form.elements["a"] : "";
 				<div class="col-md-12">
 					<div class="advancedsubmit">
 					<!--advancedsubmit-->
-<script  type="text/JavaScript">
-function iiiAdvSubmit()
-{
-obj = getObj("search");
-submitSearch(obj, location.pathname, false);
-}
-if (document.layers)
-  document.captureEvents(Event.KEYDOWN);
-document.onkeydown =
-  function (evt) {
-    var keyCode = evt ? (evt.which ? evt.which : evt.keyCode) : event.keyCode;
-    if (keyCode == 13) 
-      iiiAdvSubmit(); };
-</script>
-<a href="#" onclick="iiiAdvSubmit();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_SUBMIT btn btn-default catnav"> Submit </div></div></a>
+<!--{advancedsubmit}-->
 					<!--/advancedsubmit-->
 					</div>				
 				</div>
@@ -416,7 +379,42 @@ document.onkeydown =
 		</form>
 		</div> <!-- /advancedsearchformbegin token-->
 		
+<script type="text/javascript">
+	 
+			$(document).ready(function() {
+				//change advanced search tab to direct link 
+				//	:do this only if we're NOT on the advanced search page
+				if ( (location.pathname != '/search/X') && (location.pathname != '/search/') && (location.pathname != '/search') ) {
+					document.getElementById('tab-advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
+					//document.getElementById('mobile_advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
+					document.getElementById('tab-advanced').getElementsByTagName('a')[0].href='/search/X';
+					//document.getElementById('mobile_advanced').getElementsByTagName('option').value='#advanced';
+				}
+				//do this if we're on the advanced search page
+				else {
+					//needed to style the form element for bootstrap
+					document.getElementById('advancedsearchformbegin').getElementsByTagName('form')[0].className = "form-horizontal";
+					document.getElementById('advancedsearchformbegin').getElementsByTagName('form')[0].roleName = "form";
+					
+					function fill_options(source, target) {
+						var source_options = document.getElementById(source);
+						var target_options = document.getElementById(target);
 
+						for (var i=0; i<source_options.length; i++) {
+							var option = document.createElement('option');
+							option.text = source_options[i].text;
+							option.value = source_options[i].value;
+							target_options.add(option, target_options[i]);
+						}
+					}
+					
+					fill_options('b', 'b_target');
+					fill_options('m', 'm_target');
+					fill_options('l', 'l_target');
+				}	
+			});
+		</script>
+		
 		
 		<!--                 -->
 		</div>
@@ -485,7 +483,7 @@ document.onkeydown =
 
 			</div><!-- /title search tab -->
 
-		<div  class="tab-pane active" id="author">
+		<div class="tab-pane active" id="author">
 				<!-- <h1>Author</h1>
 				<p>Author Author Author Author Author Author Author Author Author Author Author Author </p> -->
 
@@ -541,9 +539,10 @@ document.onkeydown =
 		</div>
 		<!-- /AUTHOR -->
 
-						</div><!-- /author search tab -->	
+			</div><!-- /author search tab -->	
 			
-						<div class="tab-pane" id="subject">
+			
+			<div class="tab-pane" id="subject">
 				<!-- <h1>Subject</h1>
 				<p>Subject Subject Subject Subject Subject Subject Subject Subject Subject Subject</p> -->
 			
@@ -1520,8 +1519,11 @@ $(document).ready(function() {
 	<!--                   -->
 	</div>
 	<!-- /SEARCH CONTAINER -->
+			
+			<!--            -->
+			</div> <!-- /body_area -->			
+			<!-- /BODY AREA -->
 
-<!--{botlogo}-->
 </body>
-
+<!--{botlogo}-->
 </html>
