@@ -79,7 +79,7 @@
 	</div>
 	<!-- /class="col-md-9" -->
 
-<div class="buttondisplaylarge">	
+<div id="buttondisplaylarge">	
 	<div class="col-md-2" id="icon_but_output">
 	</div>
 	<!-- /class="col-md-2" id="icon_but_output"-->
@@ -185,6 +185,48 @@
 	<!-- /items -->
 </div>
 </div>
+
+<div id="showsmallsplit">
+<div class="row">
+<script>
+	//these are the IDs we are targeting. Adjust the order of these as desired.
+	var button_id_array = [
+		['ICON_BUT_REQUEST',], //request
+		['ICON_BUT_BIBEXPORT',], //add to saved
+		['ICON_BOOKCART_SAVED',], //remove from saved
+		['ICON_MYLISTS_SAVE',], //add to my lists
+		['smsfeatures',], //text this to me
+	];
+
+	//loop through the array of IDs and place the element into its cosponsoring array position [i][1]
+	for (var i=0; i<button_id_array.length; i++) {
+		button_id_array[i][1] = document.getElementById(button_id_array[i][0]);
+		
+		//if we found that id, AND it is wrapped in an anchor tag, clone it and append it to the 'icon_but_output' area
+		if (button_id_array[i][1]) {
+			if (button_id_array[i][1].parentElement.tagName == 'A') {
+				//console.log (button_id_array[i][1]);
+				temp_element = button_id_array[i][1].parentElement.cloneNode(true);
+				temp_element.id = temp_element.getElementsByTagName('DIV')[0].id + '_clone';
+				document.getElementById('icon_but_output').appendChild(temp_element);
+				delete temp_element;
+			}
+		}
+	}
+
+	//loop back through the list of elements in the 'icon_but_output' area and adjust the style elements to display.
+	var icon_but_output_elements = document.getElementById('icon_but_output').getElementsByTagName('A');
+
+	for (var i=0; i<icon_but_output_elements.length; i++) {
+		icon_but_output_elements[i].style = 'block';
+		icon_but_output_elements[i].getElementsByTagName('DIV')[0].style.width = '100%';
+		icon_but_output_elements[i].getElementsByTagName('DIV')[0].style.display = 'inline-block';
+	}
+	
+	
+</script>
+</div>
+</div> <!--show small split-->
 
 	<!-- orders -->
 <!--{orders}-->
