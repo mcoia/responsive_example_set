@@ -143,7 +143,7 @@ ICON_962LINK=<i class="fa fa-arrow-circle-right fa-sm" style="color:#3b77b6;"></
 #ICON_BOOKCART=<div class="ICON_BOOKCART btn btn-default catnav">Add to Bag</div>
 ICON_BOOKCART6=<div class="ICON_BOOKCART"> Save <br> Record </div>
 ICON_BOOKCART_SAVED=<div id="ICON_BOOKCART_SAVED" class="ICON_BOOKCART_SAVED btn btn-default catnav"> Remove From Bag </div>
-ICON_BOOKCART_SAVED6=<div id="ICON_BOOKCART_SAVED" class="ICON_BOOKCART_SAVED"> Remove From Bag </div>
+ICON_BOOKCART_SAVED6=<div id="ICON_BOOKCART_SAVED" class="ICON_BOOKCART_SAVED btn btn-default catnav"> Remove From Bag </div>
 ICON_FULLRECORD=<div class="ICON_FULLRECORD btn btn-default catnav"> See Full Record </div>
 ICON_LOCATEINRESULTS=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_LOCATEINRESULTS btn btn-default catnav"> Locate in results </div></div>
 ICON_PAGING_CAPTION=<span class="ICON_PAGING_CAPTION"><strong>Result Page&nbsp;</strong></span>
