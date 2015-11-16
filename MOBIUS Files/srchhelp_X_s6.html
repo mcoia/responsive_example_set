@@ -46,12 +46,12 @@
 				<li id="tab-keyword"><a href="#keyword" data-toggle="tab">Keyword</a></li>
 				<li id="tab-author"><a href="#author" data-toggle="tab">Author</a></li>
 				<li id="tab-title"><a href="#title" data-toggle="tab">Title</a></li>
-				
 				<li id="tab-subject"><a href="#subject" data-toggle="tab">Subject</a></li>
 				<li id="tab-numbers"><a href="#numbers" data-toggle="tab">Number</a></li>				
 				<li id="tab-advanced" class="active"><a href="#advanced" data-toggle="tab">Advanced Search</a></li>
 				<!-- <li id="tab-journal"><a href="#journal" data-toggle="tab">Journal</a></li> -->
-				<!--<li id="tab-database"><a href="#database" data-toggle="tab">Database</a></li>-->				
+				<!--<li id="tab-database"><a href="#database" data-toggle="tab">Database</a></li>-->
+				<!--<li id="tab-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>-->
 			</ul>
 		</div>
 		<div class="visible-sm visible-xs mobile dropdown">
@@ -60,12 +60,17 @@
 				<option id="mobile_keyword" value="#keyword">Keyword</option>
 				<option id="mobile_author" value="#author">Author</option>
 				<option id="mobile_title" value="#title">Title</option>
-				
 				<option id="mobile_subject" value="#subject">Subject</option>
 				<option id="mobile_numbers" value="#numbers">Number</option>
 				<option id="mobile_advanced" value="/search~S6/X">Advanced Search</option>
 				<!-- <option id="mobile_journal" value="#journal">Journal</option> -->
 				<!--<option id="mobile_database" value="#database">Database</option>-->
+				<option id="mobile_subject" value="#subject">Subject</option>
+				<option id="mobile_numbers" value="#numbers">Number</option>
+				<option id="mobile_advanced" value="/search/X">Advanced Search</option>
+				<!-- <option id="mobile_journal" value="#journal">Journal</option> -->
+				<!--<option id="mobile_database" value="#database">Database</option>-->
+				<!--<option id="mobile_reserves" value="#reserves">Reserve</option>-->
 			</select>
 		</div>
 		
@@ -384,16 +389,48 @@
 			
 		</form>
 		</div> <!-- /advancedsearchformbegin token-->
-		
-	
-		
-		
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//change advanced search tab to direct link 
+				//	:do this only if we're NOT on the advanced search page
+				if ( (location.pathname != '/search/X') && (location.pathname != '/search/') && (location.pathname != '/search') ) {
+					document.getElementById('tab-advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
+					//document.getElementById('mobile_advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
+					document.getElementById('tab-advanced').getElementsByTagName('a')[0].href='/search/X';
+					//document.getElementById('mobile_advanced').getElementsByTagName('option').value='#advanced';
+				}
+				//do this if we're on the advanced search page
+				else {
+					//needed to style the form element for bootstrap
+					document.getElementById('advancedsearchformbegin').getElementsByTagName('form')[0].className = "form-horizontal";
+					document.getElementById('advancedsearchformbegin').getElementsByTagName('form')[0].roleName = "form";
+					
+					function fill_options(source, target) {
+						var source_options = document.getElementById(source);
+						var target_options = document.getElementById(target);
+
+						for (var i=0; i<source_options.length; i++) {
+							var option = document.createElement('option');
+							option.text = source_options[i].text;
+							option.value = source_options[i].value;
+							target_options.add(option, target_options[i]);
+						}
+					}
+					
+					fill_options('b', 'b_target');
+					fill_options('m', 'm_target');
+					fill_options('l', 'l_target');
+				}	
+			});
+		</script>
+
 		<!--                 -->
 		</div>
 		<!-- /ADVANCED_SEARCH -->	
 						
-			</div> <!-- /advanced search tab -->
-			
+
+			</div> <!-- /advanced search tab -->		
 			
 			<div class="tab-pane" id="title">
 				
@@ -1490,8 +1527,8 @@ $(document).ready(function() {
 	<!--                   -->
 	</div>
 	<!-- /SEARCH CONTAINER -->
-			
 
 <!--{botlogo}-->
 </body>
+
 </html>
