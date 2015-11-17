@@ -31,6 +31,21 @@ border-left: none;
 text-align: center;
 }
 
+.bibLinks{
+border: solid medium #5C3278;
+margin-left: auto;
+margin-right: auto;
+}
+
+.bibLinks th {
+padding-left: 300px;
+padding-right: 300px;
+}
+
+.bibLinks tr td {
+padding-bottom: 10px;
+}
+
 .briefcitTitle{
 font-size: 1em;
 }
@@ -237,10 +252,6 @@ display: none;
 
 #showsmallsplit2 {
 display: none;
-}
-
-table.table.TABLEPARAM_BIB_LINKS{
-border: solid medium #5C3278;
 }
 
 .tablebib td {
