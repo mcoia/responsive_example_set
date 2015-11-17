@@ -96,17 +96,18 @@ Password:
     <!--{xif}-->
 
 <div class="formButtonArea">
-<!--{ifneedspin}-->
-<!--{pinresetrequest}-->
-<!--{xif}-->
 <!--{submit}-->
-<input type="submit" class="submitHidden" style="display:none">
-</div>
-
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-default catnav" data-toggle="modal" data-target="#myModal">
     PIN Help
 </button>
+<!--{ifneedspin}-->
+<!--{pinresetrequest}-->
+<!--{xif}-->
+<input type="submit" class="submitHidden" style="display:none">
+</div>
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

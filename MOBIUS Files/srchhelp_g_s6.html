@@ -385,7 +385,8 @@
 		</form>
 		</div> <!-- /advancedsearchformbegin token-->
 		
-		<script type="text/javascript">
+<script type="text/javascript">
+	 
 			$(document).ready(function() {
 				//change advanced search tab to direct link 
 				//	:do this only if we're NOT on the advanced search page
@@ -393,7 +394,7 @@
 					document.getElementById('tab-advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
 					//document.getElementById('mobile_advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
 					document.getElementById('tab-advanced').getElementsByTagName('a')[0].href='/search/X';
-					//document.getElementById('mobile_advanced').getElementsByTagName('option').value='#advanced';
+					////document.getElementById('mobile_advanced').getElementsByTagName('option').value='#advanced';
 				}
 				//do this if we're on the advanced search page
 				else {
@@ -426,7 +427,6 @@
 		<!-- /ADVANCED_SEARCH -->	
 						
 			</div> <!-- /advanced search tab -->
-			
 			
 			<div class="tab-pane" id="title">
 				

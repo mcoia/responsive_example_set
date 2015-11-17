@@ -80,9 +80,9 @@
 	<!-- /class="col-md-9" -->
 
 <div id="buttondisplaylarge">	
-	<div class="col-md-2" id="icon_but_output">
+	<div class="col-md-2" id="icon_but_output_full">
 	</div>
-	<!-- /class="col-md-2" id="icon_but_output"-->
+	<!-- /class="col-md-2" id="icon_but_output_full"-->
 
 <script>
 	//these are the IDs we are targeting. Adjust the order of these as desired.
@@ -103,20 +103,20 @@
 	for (var i=0; i<button_id_array.length; i++) {
 		button_id_array[i][1] = document.getElementById(button_id_array[i][0]);
 		
-		//if we found that id, AND it is wrapped in an anchor tag, clone it and append it to the 'icon_but_output' area
+		//if we found that id, AND it is wrapped in an anchor tag, clone it and append it to the 'icon_but_output_full' area
 		if (button_id_array[i][1]) {
 			if (button_id_array[i][1].parentElement.tagName == 'A') {
 				//console.log (button_id_array[i][1]);
 				temp_element = button_id_array[i][1].parentElement.cloneNode(true);
 				temp_element.id = temp_element.getElementsByTagName('DIV')[0].id + '_clone';
-				document.getElementById('icon_but_output').appendChild(temp_element);
+				document.getElementById('icon_but_output_full').appendChild(temp_element);
 				delete temp_element;
 			}
 		}
 	}
 
-	//loop back through the list of elements in the 'icon_but_output' area and adjust the style elements to display.
-	var icon_but_output_elements = document.getElementById('icon_but_output').getElementsByTagName('A');
+	//loop back through the list of elements in the 'icon_but_output_full' area and adjust the style elements to display.
+	var icon_but_output_elements = document.getElementById('icon_but_output_full').getElementsByTagName('A');
 
 	for (var i=0; i<icon_but_output_elements.length; i++) {
 		icon_but_output_elements[i].style = 'block';
@@ -186,8 +186,9 @@
 </div>
 </div>
 
-<div id="showsmallsplit">
-<div class="row">
+<div id="showsmallsplit1">
+<div class="row" id="icon_but_output_top_mobile">
+</div>
 <script>
 	//these are the IDs we are targeting. Adjust the order of these as desired.
 	var button_id_array = [
@@ -202,20 +203,20 @@
 	for (var i=0; i<button_id_array.length; i++) {
 		button_id_array[i][1] = document.getElementById(button_id_array[i][0]);
 		
-		//if we found that id, AND it is wrapped in an anchor tag, clone it and append it to the 'icon_but_output' area
+		//if we found that id, AND it is wrapped in an anchor tag, clone it and append it to the 'icon_but_output_top_mobile' area
 		if (button_id_array[i][1]) {
 			if (button_id_array[i][1].parentElement.tagName == 'A') {
 				//console.log (button_id_array[i][1]);
 				temp_element = button_id_array[i][1].parentElement.cloneNode(true);
 				temp_element.id = temp_element.getElementsByTagName('DIV')[0].id + '_clone';
-				document.getElementById('icon_but_output').appendChild(temp_element);
+				document.getElementById('icon_but_output_top_mobile').appendChild(temp_element);
 				delete temp_element;
 			}
 		}
 	}
 
-	//loop back through the list of elements in the 'icon_but_output' area and adjust the style elements to display.
-	var icon_but_output_elements = document.getElementById('icon_but_output').getElementsByTagName('A');
+	//loop back through the list of elements in the 'icon_but_output_top_mobile' area and adjust the style elements to display.
+	var icon_but_output_elements = document.getElementById('icon_but_output_top_mobile').getElementsByTagName('A');
 
 	for (var i=0; i<icon_but_output_elements.length; i++) {
 		icon_but_output_elements[i].style = 'block';
@@ -225,8 +226,7 @@
 	
 	
 </script>
-</div>
-</div> <!--show small split-->
+</div> <!--show small split1-->
 
 	<!-- orders -->
 <!--{orders}-->
@@ -248,7 +248,7 @@
 
 </div>
 
-		<a href="#here" name="smsbutton" id="smsbutton" onClick="showsms();return false;">
+<a href="#here" name="smsbutton" id="smsbutton" onClick="showsms();return false;">
     <div id="smsfeatures" class="btn btn-default catnav">
         <i class="fa fa-mobile" style="font-size:150%"></i> Text call number
     </div>
@@ -269,6 +269,47 @@
 </div>
 <!--{xif}-->
 
+<div id="showsmallsplit2">
+<div class="row" id="icon_but_output_bot_mobile">
+</div>
+<script>
+	//these are the IDs we are targeting. Adjust the order of these as desired.
+	var button_id_array = [
+		['ICON_INNREACH'], //MOBIUS
+		['ICON_BUT_SHOWSIM',], //more like this
+		['ICON_MYLISTS_SAVE_TO_LIST',], //Add Marked to My Lists
+		['ICON_MYLISTS_RECORD',], //Add to My Lists
+		['ICON_BUT_MARC_DISPLAY',], //marc display
+	];
+
+	//loop through the array of IDs and place the element into its cosponsoring array position [i][1]
+	for (var i=0; i<button_id_array.length; i++) {
+		button_id_array[i][1] = document.getElementById(button_id_array[i][0]);
+		
+		//if we found that id, AND it is wrapped in an anchor tag, clone it and append it to the 'icon_but_output_bot_mobile' area
+		if (button_id_array[i][1]) {
+			if (button_id_array[i][1].parentElement.tagName == 'A') {
+				//console.log (button_id_array[i][1]);
+				temp_element = button_id_array[i][1].parentElement.cloneNode(true);
+				temp_element.id = temp_element.getElementsByTagName('DIV')[0].id + '_clone';
+				document.getElementById('icon_but_output_bot_mobile').appendChild(temp_element);
+				delete temp_element;
+			}
+		}
+	}
+
+	//loop back through the list of elements in the 'icon_but_output_bot_mobile' area and adjust the style elements to display.
+	var icon_but_output_elements = document.getElementById('icon_but_output_bot_mobile').getElementsByTagName('A');
+
+	for (var i=0; i<icon_but_output_elements.length; i++) {
+		icon_but_output_elements[i].style = 'block';
+		icon_but_output_elements[i].getElementsByTagName('DIV')[0].style.width = '100%';
+		icon_but_output_elements[i].getElementsByTagName('DIV')[0].style.display = 'inline-block';
+	}
+	
+	
+</script>
+</div> <!--show small split2-->
 
 
 </div><!-- close bibDisplayContent -->
