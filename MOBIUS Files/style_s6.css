@@ -142,6 +142,10 @@ position: relative;
 width: 100%;
 }
 
+.hidebutton {
+display: none;
+}
+
 .holdingsDivider{
 border: solid 1px #5C3278;
 }
