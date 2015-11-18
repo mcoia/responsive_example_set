@@ -2,7 +2,6 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" /> 
 		<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css" />
@@ -23,7 +22,7 @@
 		<![endif]-->
 		<script type="text/javascript" src="/screens/bibdisplay.js"></script>
 
-		<link rel="stylesheet" type="text/css" src="/screens/style_s6.css" />
+		<link href="/screens/style_s6.css" rel="stylesheet"> 
 
 		<title>LANCE Catalog</title>
  
@@ -48,8 +47,11 @@
 				<li id="tab-author"><a href="#author" data-toggle="tab">Author</a></li>
 				<li id="tab-title"><a href="#title" data-toggle="tab">Title</a></li>
 				<li id="tab-subject"><a href="#subject" data-toggle="tab">Subject</a></li>
-				<li id="tab-numbers active"><a href="#numbers" data-toggle="tab">Number</a></li>				
+				<li id="tab-numbers" class="active"><a href="#numbers" data-toggle="tab">Number</a></li>				
 				<li id="tab-advanced"><a href="#advanced" data-toggle="tab">Advanced Search</a></li>
+				<!-- <li id="tab-journal"><a href="#journal" data-toggle="tab">Journal</a></li> -->
+				<!--<li id="tab-database"><a href="#database" data-toggle="tab">Database</a></li>-->
+				<!--<li id="tab-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>-->
 			</ul>
 		</div>
 		<div class="visible-sm visible-xs mobile dropdown">
@@ -61,6 +63,9 @@
 				<option id="mobile_subject" value="#subject">Subject</option>
 				<option id="mobile_numbers" value="#numbers">Number</option>
 				<option id="mobile_advanced" value="/search/X">Advanced Search</option>
+				<!-- <option id="mobile_journal" value="#journal">Journal</option> -->
+				<!--<option id="mobile_database" value="#database">Database</option>-->
+				<!--<option id="mobile_reserves" value="#reserves">Reserve</option>-->
 			</select>
 		</div>
 		
@@ -151,20 +156,34 @@
 		
 		<!-- output any message from the server here -->
 	<!-- msg -->
-<!--{msg}-->
 	<!-- /msg -->
 	
 	<!-- innreach -->	
-<!--{innreach}-->	
 	<!-- innreach -->
 	
 	<!-- spellcheck -->
-<!--{spellcheck}-->
 	<!-- /spellcheck -->
 	
 		<div id="advancedsearchformbegin">
 		<!--advancedsearchformbegin-->
-<!--{advancedsearchformbegin}-->
+<script type="text/javascript">
+//global variables below are set by webpac
+encode = "";
+savedScopeIndex = 7;
+//this func is created at runtime by webpac
+function AdvancedSearchForm_initLimits(ths, form)
+{
+ths.limitArray.lang = (form.elements["l"]) ? form.elements["l"] : "";
+ths.limitArray.mattype = (form.elements["m"]) ? form.elements["m"] : "";
+ths.limitArray.branch = (form.elements["b"]) ? form.elements["b"] : "";
+ths.limitArray.publish = (form.elements["p"]) ? form.elements["p"] : "";
+ths.limitArray.invnum = (form.elements["i"]) ? form.elements["i"] : "";
+ths.limitArray.accsprvdr = (form.elements["a"]) ? form.elements["a"] : "";
+}
+</script>
+<!-- FOR USE IN ADVANCED SEARCH PAGES (e.g.: srchhelp_X.html) ONLY -->
+<!-- FOR PHRASE SEARCH PAGES USE TOKEN: formbegin -->
+<form action="#" enctype="multipart/form-data: " name="search" id="search" onsubmit="return submitSearch(this, location.pathname, false);">
 		<!--/advancedsearchformbegin-->
 		<!-- JavaScript below will modify the class for this form ... -->
 		
@@ -371,7 +390,21 @@
 				<div class="col-md-12">
 					<div class="advancedsubmit">
 					<!--advancedsubmit-->
-<!--{advancedsubmit}-->
+<script  type="text/JavaScript">
+function iiiAdvSubmit()
+{
+obj = getObj("search");
+submitSearch(obj, location.pathname, false);
+}
+if (document.layers)
+  document.captureEvents(Event.KEYDOWN);
+document.onkeydown =
+  function (evt) {
+    var keyCode = evt ? (evt.which ? evt.which : evt.keyCode) : event.keyCode;
+    if (keyCode == 13) 
+      iiiAdvSubmit(); };
+</script>
+<a href="#" onclick="iiiAdvSubmit();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_SUBMIT btn btn-default catnav"> Submit </div></div></a>
 					<!--/advancedsubmit-->
 					</div>				
 				</div>
@@ -380,41 +413,7 @@
 		</form>
 		</div> <!-- /advancedsearchformbegin token-->
 		
-<script type="text/javascript">
-	 
-			$(document).ready(function() {
-				//change advanced search tab to direct link 
-				//	:do this only if we're NOT on the advanced search page
-				if ( (location.pathname != '/search/X') && (location.pathname != '/search/') && (location.pathname != '/search') ) {
-					document.getElementById('tab-advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
-					//document.getElementById('mobile_advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
-					document.getElementById('tab-advanced').getElementsByTagName('a')[0].href='/search/X';
-					//document.getElementById('mobile_advanced').getElementsByTagName('option').value='#advanced';
-				}
-				//do this if we're on the advanced search page
-				else {
-					//needed to style the form element for bootstrap
-					document.getElementById('advancedsearchformbegin').getElementsByTagName('form')[0].className = "form-horizontal";
-					document.getElementById('advancedsearchformbegin').getElementsByTagName('form')[0].roleName = "form";
-					
-					function fill_options(source, target) {
-						var source_options = document.getElementById(source);
-						var target_options = document.getElementById(target);
 
-						for (var i=0; i<source_options.length; i++) {
-							var option = document.createElement('option');
-							option.text = source_options[i].text;
-							option.value = source_options[i].value;
-							target_options.add(option, target_options[i]);
-						}
-					}
-					
-					fill_options('b', 'b_target');
-					fill_options('m', 'm_target');
-					fill_options('l', 'l_target');
-				}	
-			});
-		</script>
 		
 		<!--                 -->
 		</div>
@@ -1448,7 +1447,6 @@ $(document).ready(function() {
 					$('#mobile_drop option[value="#keyword"]').prop("selected", "selected");
 					console.log("keyword: ");
 					break;
-
 				case "/search/X":
 				case "/search/":
 				case "/search":
@@ -1464,7 +1462,6 @@ $(document).ready(function() {
 					$('#mobile_drop option[value="#title"]').prop("selected", "selected");
 					console.log("title:");
 					break;
-
 				case "/search/a":
 				//case "/search/t":
 				//case "/search/j":
@@ -1493,7 +1490,6 @@ $(document).ready(function() {
 					$('#desktop_tabs a[href="#reserves"]').tab('show');
 					$('#mobile_drop option[value="#reserves"]').prop("selected", "selected");
 					break;
-
 				case "/search/c":
 				case "/search/g":
 				case "/search/f":
@@ -1505,7 +1501,6 @@ $(document).ready(function() {
 					$('#mobile_drop option[value="#numbers"]').prop("selected", "selected");
 					console.log("numbers: ");
 					break;
-
 				default:
 					$('#desktop_tabs a[href="#keyword"]').tab('show');
 					$('#mobile_drop option[value="#keyword"]').prop("selected", "selected");
@@ -1518,11 +1513,8 @@ $(document).ready(function() {
 	<!--                   -->
 	</div>
 	<!-- /SEARCH CONTAINER -->
-			
-			<!--            -->
-			</div> <!-- /body_area -->			
-			<!-- /BODY AREA -->
 
-</body>
 <!--{botlogo}-->
+</body>
+
 </html>
