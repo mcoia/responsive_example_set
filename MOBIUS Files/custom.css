@@ -1,3 +1,15 @@
+.navbar-default {
+   font-family:'Trebuchet MS',Verdana,Arial,Helvetica,sans-serif;
+   font-weight: bold;
+   background-color: #0096a7;
+   color: #ffffff;
+   font-size: 16px;
+   position: relative;
+   width: 100%;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
 .btn-primary {
 	 background-color: #014184;
     border-color: #2e6da4;
