@@ -22,7 +22,7 @@
 		<![endif]-->
 		<script type="text/javascript" src="/screens/bibdisplay.js"></script>
 
-		<link rel="stylesheet" type="text/css" src="/screens/style_s6.css" />
+<link href="/screens/style_s6.css" rel="stylesheet">
 
 		<title>LANCE Catalog</title>
  
@@ -54,13 +54,13 @@
 		<div class="visible-sm visible-xs mobile dropdown">
 			<label for="selectNavigation" class="float-left">Search Type:</label>
 			<select name="selectNavigation" id="mobile_drop" type="button" data-toggle="dropdown" class="mobile form-control btn btn-primary dropdown-toggle" >
-				<li id="tab-keyword"><a href="#keyword" data-toggle="tab">Keyword</a></li>
-				<li id="tab-author"><a href="#author" data-toggle="tab">Author</a></li>
-				<li id="tab-title"><a href="#title" data-toggle="tab">Title</a></li>
-				<li id="tab-subject"><a href="#subject" data-toggle="tab">Subject</a></li>
-				<li id="tab-numbers"><a href="#numbers" data-toggle="tab">Number</a></li>				
-				<li id="tab-advanced"><a href="#advanced" data-toggle="tab">Advanced Search</a></li>
-				</select>
+				<option id="mobile_keyword" value="#keyword">Keyword</option>
+				<option id="mobile_author" value="#author">Author</option>
+				<option id="mobile_title" value="#title">Title</option>
+				<option id="mobile_subject" value="#subject">Subject</option>
+				<option id="mobile_numbers" value="#numbers">Number</option>
+				<option id="mobile_advanced" value="/search/X">Advanced Search</option>
+			</select>
 		</div>
 		
 		<div id="my-tab-content" class="tab-content">

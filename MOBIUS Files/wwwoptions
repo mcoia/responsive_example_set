@@ -139,7 +139,7 @@ HEADING_LENGTH=100
 ICON_856LINK=<i class="fa fa-arrow-circle-right fa-sm" style="color:#3b77b6;"></i> Website
 ICON_962LINK=<i class="fa fa-arrow-circle-right fa-sm" style="color:#3b77b6;"></i> Digital Image
 #ICON_BOOKCART=<div class="ICON_BOOKCART btn btn-default catnav">Add to Bag</div>
-ICON_BOOKCART6=<div class="ICON_BOOKCART"> Save <br> Record </div>
+ICON_BOOKCART6=<div class="ICON_BOOKCART"> Save Record </div>
 ICON_BOOKCART_SAVED=<div id="ICON_BOOKCART_SAVED" class="ICON_BOOKCART_SAVED btn btn-default catnav"> Remove From Bag </div>
 ICON_BOOKCART_SAVED6=<div id="ICON_BOOKCART_SAVED" class="ICON_BOOKCART_SAVED btn btn-default catnav"> Remove From Bag </div>
 ICON_FULLRECORD=<div class="ICON_FULLRECORD btn btn-default catnav"> See Full Record </div>
@@ -204,7 +204,7 @@ TABLEPARAM_BIB_HOLDS=class="table TABLEPARAM_BIB_HOLDS"
 TABLEPARAM_BIB_INFO=class="table TABLEPARAM_BIB_INFO"
 TABLEPARAM_BIB_ITEMS=class="table table-striped TABLEPARAM_BIB_ITEMS"
 TABLEPARAM_BIB_LINKS=class="table TABLEPARAM_BIB_LINKS"
-TABLEPARAM_BIB_LINKS6=""
+TABLEPARAM_BIB_LINKS6=class="table TABLEPARAM_BIB_LINKS bibLinks"
 TABLEPARAM_BIB_ORDER=class="table TABLEPARAM_BIB_ORDER"
 TABLEPARAM_BIB_PAGER=class="table TABLEPARAM_BIB_PAGER"
 TABLEPARAM_BIB_THUMBNAILS=class="table TABLEPARAM_BIB_THUMBNAILS"
@@ -314,6 +314,7 @@ ICON_CONFIRM_NO=<div onmousedown="this.className='pressedState';" onmouseout="th
 ICON_PAT_CANCELALL=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_PAT_CANCELALL btn btn-default catnav"> Cancel All </div></div>
 ICON_PAT_CANCELMARK=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_PAT_CANCELMARK btn btn-default catnav"> Cancel Selected </div></div>
 ICON_PIN_RESET=<span class="button"><div class="ICON_PIN_RESET btn btn-default catnav"> Forget Your PIN? </div></span>
+ICON_PIN_RESET6=<span class="button"><img src="/screens/ico_questionmark.png" alt=""><div class="ICON_PIN_RESET"> Forget Your PIN? </div></span>
 ICON_SORTPUDATE=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_SORTPUDATE btn btn-default catnav"> Sort by Pickup </div></div>
 ICON_SORTREQDATE=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_SORTREQDATE btn btn-default catnav"> Sort by Request </div></div>
 #MIN_PIN_LENGTH=6

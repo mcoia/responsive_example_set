@@ -16,8 +16,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
  <script type="text/javascript">
+ 
 $("#selectNavigation").on('change', function(e){
 	window.location = this.value;
 });
@@ -38,7 +46,7 @@ $(document).ready(function () {
     });
 </script>
 
-<link rel="stylesheet" type="text/css" src='/screens/style_s6.css'/>
+<link href="/screens/style_s6.css" rel="stylesheet">
 
 		
 		<!-- HEADER -->
@@ -73,6 +81,7 @@ $(document).ready(function () {
 				<li><a href="http://library.truman.edu/">Library Home</a> </li>
 				<li><a href="/patroninfo">My Library Account</a> </li>
 				<li><a href="/search/b">Course Reserves</a> </li>
+				<li><a href="/search/">New Search</a> </li>
 				<li><a href="http://library.truman.edu/about-us/AskUs.asp">Help</a> </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
