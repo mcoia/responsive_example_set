@@ -2,9 +2,9 @@
 background-color: #5C3278;
 color: #ffffff;
 font-family:'Trebuchet MS',Verdana,Arial,Helvetica,sans-serif;
-font-size: 85%;
+font-size: 77%;
 font-style: normal;
-font-weight: bold;
+font-weight: 600;
 padding-bottom: 5px;
 padding-left: 15px;
 padding-top: 5px;
@@ -225,7 +225,7 @@ overflow-y: hidden;
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
 background-color: #5C3278;
 background: #5C3278;
-border: 2px solid #eee;
+border: 2px solid #5C3278;
 color: white;
 }
 
