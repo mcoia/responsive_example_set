@@ -38,13 +38,19 @@ margin-right: auto;
 }
 
 .bibLinks th {
-padding-left: 300px;
-padding-right: 300px;
+padding-left: 35%;
+padding-right: 35%;
 }
 
 .bibLinks tr td {
 padding-bottom: 10px;
 }
+
+.bibLinks tr td a {
+padding-right:10%;
+padding-left: 10%;
+}
+
 
 .briefcitTitle{
 font-size: 1em;
@@ -109,6 +115,11 @@ border-color: #5C3278;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+background-color: #5C3278;
+border-color: #5C3278;
+}
+
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
 background-color: #5C3278;
 border-color: #5C3278;
 }
@@ -254,6 +265,10 @@ color: black;
 display: none;
 }
 
+#showsmallsplit1 #ICON_BOOKCART_SAVED {
+margin: auto;
+}
+
 #showsmallsplit2 {
 display: none;
 }
@@ -279,6 +294,9 @@ font-weight: bold;
 
 @media (max-width: 992px) {
 #buttondisplaylarge {display: none;}
-#showsmallsplit1 {display: inline-block;}
+#showsmallsplit1 {
+display: inline-block;
+text-align: center;
+}
 #showsmallsplit2 {display: inline-block;}
 }
