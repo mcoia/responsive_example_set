@@ -107,21 +107,25 @@ margin-top: 30px;
 .btn .btn-primary {
 background-color: #5C3278;
 background-image: none;
+background: #5C3278;
 }
 
 .btn-primary {
 background-color: #5C3278;
 border-color: #5C3278;
+background: #5C3278;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
 background-color: #5C3278;
 border-color: #5C3278;
+background: #5C3278;
 }
 
 .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
 background-color: #5C3278;
 border-color: #5C3278;
+background: #5C3278;
 }
 
 #buttondisplaylarge {
@@ -130,6 +134,7 @@ display: block;
 
 .catnav{
 background-color: #5C3278;
+background: #5C3278;
 background-image: none;
 color: white;
 }
@@ -188,6 +193,7 @@ background-color: #ffffff;
 
 .mobile .form-control .btn .btn-primary .dropdown-toggle{
 background-color: #5C3278;
+background: #5C3278;
 background-image: none;
 }
 
@@ -207,6 +213,7 @@ width: 100%;
 .navbar-default {
 border-color: #5C3278;
 background-color: #5C3278;
+background: #5C3278;
 color: #ffffff;
 font-family:'Trebuchet MS',Verdana,Arial,Helvetica,sans-serif;
 font-size: 19px;
@@ -217,6 +224,7 @@ overflow-y: hidden;
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
 background-color: #5C3278;
+background: #5C3278;
 border: 2px solid #eee;
 color: white;
 }
@@ -236,19 +244,23 @@ color:white;
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 background-color:#5C3278;
+background: #5C3278;
 border: 1px solid #5C3278;
 }
 
 .navbar-header{
 background-color: #5C3278;
+background: #5C3278;
 }
 
 .navbar-toggle .collapsed {
 background-color: #5C3278;
+background: #5C3278;
 }
 
 .navbar-default .navbar-toggle {
 border-color: #5C3278;
+background: #5C3278;
 }
 
 .nav-tabs>li>a {
