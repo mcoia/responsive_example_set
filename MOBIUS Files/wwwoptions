@@ -314,7 +314,7 @@ ICON_CONFIRM_NO=<div onmousedown="this.className='pressedState';" onmouseout="th
 ICON_PAT_CANCELALL=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_PAT_CANCELALL btn btn-default catnav"> Cancel All </div></div>
 ICON_PAT_CANCELMARK=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_PAT_CANCELMARK btn btn-default catnav"> Cancel Selected </div></div>
 ICON_PIN_RESET=<span class="button"><div class="ICON_PIN_RESET btn btn-default catnav"> Forget Your PIN? </div></span>
-ICON_PIN_RESET6=<span class="button"><img src="/screens/ico_questionmark.png" alt=""><div class="ICON_PIN_RESET"> Forget Your PIN? </div></span>
+ICON_PIN_RESET6=<img src="/screens/ico_questionmark.png" alt=""><span class="button"><div class="ICON_PIN_RESET"> Forget Your PIN? </div></span>
 ICON_SORTPUDATE=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_SORTPUDATE btn btn-default catnav"> Sort by Pickup </div></div>
 ICON_SORTREQDATE=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_SORTREQDATE btn btn-default catnav"> Sort by Request </div></div>
 #MIN_PIN_LENGTH=6

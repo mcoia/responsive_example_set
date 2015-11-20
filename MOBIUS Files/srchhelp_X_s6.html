@@ -54,6 +54,7 @@
 				<!--<li id="tab-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>-->
 			</ul>
 		</div>
+		
 		<div class="visible-sm visible-xs mobile dropdown">
 			<label for="selectNavigation" class="float-left">Search Type:</label>
 			<select name="selectNavigation" id="mobile_drop" type="button" data-toggle="dropdown" class="mobile form-control btn btn-primary dropdown-toggle" >
@@ -432,7 +433,7 @@
 			<div class="tab-pane" id="title">
 				
 
-		<!-- TITLE-->
+			<!-- TITLE-->
 		<div id="TITLE">
 		<!--              -->			
 
@@ -481,6 +482,68 @@
 					</div>
 				</div>
 				
+			</form>
+			<hr>
+
+<form class="form-horizontal" role="form" action="/search/s" method="get">
+
+				<span class="help-block">Enter Search Terms For <strong>Journal, Magazine & Newspaper Title</strong></span>
+			
+				<div class="form-group">
+					<label for="input_title" class="col-md-1 control-label">Title: </label>
+					<div class="col-md-8">
+						<input name="SEARCH" type="text" class="form-control" id="input_subject" placeholder="Enter Medical Subject">
+					</div>
+				</div>
+											
+				<div class="form-group">
+					<div class="col-md-offset-1 col-md-11">
+					<input type="hidden" id="iiiFormHandle_1"/>
+						<button name="SUBMIT" type="submit" class="btn btn-default">Search</button>
+						<script type="text/JavaScript">
+
+//getFormHandleForm() is in common.js
+var evtobj = getFormHandleForm(1);
+if (document.layers)
+    {
+    document.captureEvents(Event.KEYUP);
+    }
+document.onkeyup = function(evt)
+{
+if (!evt) evt = window.event;
+var keyCode;
+if (evt.which) keyCode = evt.which;
+else if (evt.keyCode) keyCode = evt.keyCode;
+var targ;
+if (evt.target) targ = evt.target;
+else if (evt.srcElement) targ = evt.srcElement;
+if (targ.nodeType == 3) //for Safari bug
+    targ = targ.parentNode;
+if (targ.form)
+    {
+    targ = targ.form;
+    //alert('targ='+targ+'  evtobj='+evtobj);
+    if (keyCode == 13 && targ == evtobj)
+        {
+        iiiDoSubmit_1();
+        }
+    }
+};
+
+</script>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-offset-1 col-md-11">
+						Type as much or as little of the <b>EXACT TITLE</b> as you want. <br>
+						For example:
+						<ul>
+							<li> journal of counseling psychology </li>
+							<li> journal of counseling psy </li>
+							<li> journal of the philosophy of sport </li>
+					</div>
+				</div>
 			</form>
 			
 		<!--               -->
