@@ -220,7 +220,6 @@ a.header_link:hover {
 	background-size: cover;
 }			
 .our_footer::before {
-	position: absolute;
 	content: '';
 	height: 100%;
 	width: 100%;
