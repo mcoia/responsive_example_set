@@ -307,8 +307,11 @@ font-weight: bold;
 @media (max-width: 992px) {
 #buttondisplaylarge {display: none;}
 #showsmallsplit1 {
-display: inline-block;
+display: block;
 text-align: center;
 }
-#showsmallsplit2 {display: inline-block;}
+#showsmallsplit2 {
+display: block;
+text-align: center;
+}
 }
