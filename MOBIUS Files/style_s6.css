@@ -1,4 +1,4 @@
-#bs-example-navbar-collapse-1{
+﻿#bs-example-navbar-collapse-1{
 background-color: #5C3278;
 color: #ffffff;
 font-family:'Trebuchet MS',Verdana,Arial,Helvetica,sans-serif;
@@ -58,6 +58,11 @@ font-size: 1em;
 
 #briefcit-hr {
 border-top: 2px solid #5C3278;				
+}
+
+.briefcit_bookjacket img {
+margin-bottom: 5px;
+max-width: 64px;				
 }
 
 .briefcitJacket img {
@@ -302,6 +307,12 @@ margin-top: 10px;
 
 td.bibHoldingsLabel {
 font-weight: bold;
+}
+
+td.briefcitCell {
+border-bottom: 2px solid #5C3278;
+margin-bottom: 10px;
+margin-top: 10px;
 }
 
 @media (max-width: 992px) {
