@@ -24,14 +24,7 @@
 	<!--{innreach}-->
 <!--{innreach}-->
 	<!--{innreach}-->	
-
-<a href="#here" name="smsbutton" id="smsbutton" onClick="showsms();return false;">
-    <div id="smsfeatures" class="btn btn-default catnav">
-        <i class="fa fa-mobile" style="font-size:150%"></i> Text call number
-    </div>
-</a>
-
-		
+	
 </div>
 
 <div class="spacer">&nbsp;</div>
@@ -83,18 +76,28 @@
 		<!-- recordinfo:atpe -->
 <!--{recordinfo:atpe}-->
 		<!-- /recordinfo:atpe -->
-<!--{ifhaspatrate}-->
-<div class="bibDisplayRatings">
-<!--{ratings}-->
-</div>
-<!--{xif}-->
 
-	</div>
+<div class="row">
+<div class="hidebutton">
+		<a href="#here" name="smsbutton" id="smsbutton" onClick="showsms();return false;">
+    <div id="smsfeatures" class="btn btn-default catnav">
+        <i class="fa fa-mobile" style="font-size:150%"></i> Text call number
+    </div>
+</a>
+</div> <!--hidebutton-->
+
+<!-- just a placeholder for the sms form -->
+<div id='sms' style="visibility:hidden;display:none">
+</div>
+
+</div> <!--row for sms-->
+</div>
 	<!-- /class="col-md-9" -->
-	
-	<div class="col-md-2" id="icon_but_output">
+
+<div id="buttondisplaylarge">	
+	<div class="col-md-2" id="icon_but_output_full">
 	</div>
-	<!-- /class="col-md-2" id="icon_but_output"-->
+	<!-- /class="col-md-2" id="icon_but_output_full"-->
 
 <script>
 	//these are the IDs we are targeting. Adjust the order of these as desired.
@@ -115,20 +118,20 @@
 	for (var i=0; i<button_id_array.length; i++) {
 		button_id_array[i][1] = document.getElementById(button_id_array[i][0]);
 		
-		//if we found that id, AND it is wrapped in an anchor tag, clone it and append it to the 'icon_but_output' area
+		//if we found that id, AND it is wrapped in an anchor tag, clone it and append it to the 'icon_but_output_full' area
 		if (button_id_array[i][1]) {
 			if (button_id_array[i][1].parentElement.tagName == 'A') {
 				//console.log (button_id_array[i][1]);
 				temp_element = button_id_array[i][1].parentElement.cloneNode(true);
 				temp_element.id = temp_element.getElementsByTagName('DIV')[0].id + '_clone';
-				document.getElementById('icon_but_output').appendChild(temp_element);
+				document.getElementById('icon_but_output_full').appendChild(temp_element);
 				delete temp_element;
 			}
 		}
 	}
 
-	//loop back through the list of elements in the 'icon_but_output' area and adjust the style elements to display.
-	var icon_but_output_elements = document.getElementById('icon_but_output').getElementsByTagName('A');
+	//loop back through the list of elements in the 'icon_but_output_full' area and adjust the style elements to display.
+	var icon_but_output_elements = document.getElementById('icon_but_output_full').getElementsByTagName('A');
 
 	for (var i=0; i<icon_but_output_elements.length; i++) {
 		icon_but_output_elements[i].style = 'block';
@@ -138,6 +141,7 @@
 	
 	
 </script>
+</div> <!--buttondisplaylarge-->
 	
 </div>
 <!-- /class="row" -->
@@ -186,14 +190,59 @@
 <!--{holdings}-->
 	<!-- /holdings -->
 
-<div class="bibDisplayItems">
+	<br>
+	<br>
+	
+<!--<div class="bibDisplayItems">
 <div class="bibDisplayItemsHeader"><strong>Copies</strong></div>
 <div class="bibDisplayItemsMain">
 	<!-- items -->
 <!--{items}-->
 	<!-- /items -->
+<!--</div>
+</div>-->
+
+<div id="showsmallsplit1">
+<div class="row" id="icon_but_output_top_mobile">
 </div>
-</div>
+<script>
+	//these are the IDs we are targeting. Adjust the order of these as desired.
+	var button_id_array = [
+		['ICON_BUT_REQUEST',], //request
+		['ICON_BUT_BIBEXPORT',], //add to saved
+		['ICON_BOOKCART_SAVED',], //remove from saved
+		['ICON_MYLISTS_SAVE',], //add to my lists
+		['smsfeatures',], //text this to me
+	];
+
+	//loop through the array of IDs and place the element into its cosponsoring array position [i][1]
+	for (var i=0; i<button_id_array.length; i++) {
+		button_id_array[i][1] = document.getElementById(button_id_array[i][0]);
+		
+		//if we found that id, AND it is wrapped in an anchor tag, clone it and append it to the 'icon_but_output_top_mobile' area
+		if (button_id_array[i][1]) {
+			if (button_id_array[i][1].parentElement.tagName == 'A') {
+				//console.log (button_id_array[i][1]);
+				temp_element = button_id_array[i][1].parentElement.cloneNode(true);
+				temp_element.id = temp_element.getElementsByTagName('DIV')[0].id + '_clone';
+				document.getElementById('icon_but_output_top_mobile').appendChild(temp_element);
+				delete temp_element;
+			}
+		}
+	}
+
+	//loop back through the list of elements in the 'icon_but_output_top_mobile' area and adjust the style elements to display.
+	var icon_but_output_elements = document.getElementById('icon_but_output_top_mobile').getElementsByTagName('A');
+
+	for (var i=0; i<icon_but_output_elements.length; i++) {
+		icon_but_output_elements[i].style = 'block';
+		icon_but_output_elements[i].getElementsByTagName('DIV')[0].style.width = '100%';
+		icon_but_output_elements[i].getElementsByTagName('DIV')[0].style.display = 'inline-block';
+	}
+	
+	
+</script>
+</div> <!--show small split1-->
 
 	<!-- orders -->
 <!--{orders}-->
@@ -206,7 +255,7 @@
 </div>
 
 
-<div class="bibDisplayContentMore bibDisplayReviews">
+<div class="tablebib" class="bibDisplayContentMore bibDisplayReviews">
 <div id="bib_link" class="bibDisplayPermLink actionButtonArea">
 
 	<!-- recordlink -->
@@ -230,6 +279,47 @@
 </div>
 <!--{xif}-->
 
+<div id="showsmallsplit2">
+<div class="row" id="icon_but_output_bot_mobile">
+</div>
+<script>
+	//these are the IDs we are targeting. Adjust the order of these as desired.
+	var button_id_array = [
+		['ICON_INNREACH'], //MOBIUS
+		['ICON_BUT_SHOWSIM',], //more like this
+		['ICON_MYLISTS_SAVE_TO_LIST',], //Add Marked to My Lists
+		['ICON_MYLISTS_RECORD',], //Add to My Lists
+		['ICON_BUT_MARC_DISPLAY',], //marc display
+	];
+
+	//loop through the array of IDs and place the element into its cosponsoring array position [i][1]
+	for (var i=0; i<button_id_array.length; i++) {
+		button_id_array[i][1] = document.getElementById(button_id_array[i][0]);
+		
+		//if we found that id, AND it is wrapped in an anchor tag, clone it and append it to the 'icon_but_output_bot_mobile' area
+		if (button_id_array[i][1]) {
+			if (button_id_array[i][1].parentElement.tagName == 'A') {
+				//console.log (button_id_array[i][1]);
+				temp_element = button_id_array[i][1].parentElement.cloneNode(true);
+				temp_element.id = temp_element.getElementsByTagName('DIV')[0].id + '_clone';
+				document.getElementById('icon_but_output_bot_mobile').appendChild(temp_element);
+				delete temp_element;
+			}
+		}
+	}
+
+	//loop back through the list of elements in the 'icon_but_output_bot_mobile' area and adjust the style elements to display.
+	var icon_but_output_elements = document.getElementById('icon_but_output_bot_mobile').getElementsByTagName('A');
+
+	for (var i=0; i<icon_but_output_elements.length; i++) {
+		icon_but_output_elements[i].style = 'block';
+		icon_but_output_elements[i].getElementsByTagName('DIV')[0].style.width = '100%';
+		icon_but_output_elements[i].getElementsByTagName('DIV')[0].style.display = 'inline-block';
+	}
+	
+	
+</script>
+</div> <!--show small split2-->
 
 
 </div><!-- close bibDisplayContent -->
