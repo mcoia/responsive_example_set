@@ -56,8 +56,9 @@ ICON_CLEAR_FORM=<div onmousedown="this.className='pressedState';" onmouseout="th
 ICON_DELETE_SELECTED=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_DELETE_SELECTED btn btn-default catnav"> Delete Selected </div></div>
 ICON_SELECT_ALL=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_SELECT_ALL btn btn-default catnav"> Save All </div></div>
 RESOURCETABLE=
-INSERTTAG_INHEAD=<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"> <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> <!-- Bootstrap --> <link href="/screens/bootstrap.min.css" rel="stylesheet"> <script type="text/javascript" src="/screens/bootstrap.min.js"></script> <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"><!-- Custom CSS --> <link href="/screens/custom.css" rel="stylesheet"> <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]--><script type="text/javascript" src="/screens/bibdisplay.js"></script>
-INSERTTAG_HTML=<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">RIGHT_CELL_WIDTH=18|25
+INSERTTAG_INHEAD=<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"><script type="text/javascript" src="/screens/bibdisplay.js"></script>
+INSERTTAG_HTML=<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+RIGHT_CELL_WIDTH=18|25
 SSLPORT=80:443|2082:444
 CUSTOM_MESSAGES=F
 STARTOVER=/search

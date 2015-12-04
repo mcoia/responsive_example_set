@@ -227,6 +227,11 @@ a.header_link:hover {
 	left: 0;
 	z-index: 0;
 }
+
+.hidebutton {
+    display: none;
+}
+
 /*idbutton style*/
 #idHelpButton { margin:10px; text-align:center; width:76px; float:left; }
 
