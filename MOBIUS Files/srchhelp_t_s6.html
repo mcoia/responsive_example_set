@@ -1,16 +1,20 @@
-<!-- Truman Scoped Example --> 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">	
-<head>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" /> 
+		<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css" />
+		<script type="text/javascript" src="/scripts/elcontent.js"></script>
+		<script type="text/javascript" src="/scripts/common.js"></script>
+		<script type="text/javascript" src="/scripts/features.js"></script>
 		
 		<!--[if lt IE 9]> 
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> 
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> 
 		<![endif]-->
 		<script type="text/javascript" src="/screens/bibdisplay.js"></script>
+
 		<link href="/screens/style_s6.css" rel="stylesheet">
 
 		<title>LANCE Catalog</title>
@@ -34,21 +38,24 @@
 			<ul id="desktop_tabs" class="nav nav-tabs" data-tabs="tabs">
 				<li id="tab-keyword"><a href="#keyword" data-toggle="tab">Keyword</a></li>
 				<li id="tab-author"><a href="#author" data-toggle="tab">Author</a></li>
-				<li id="tab-title"><a href="#title" data-toggle="tab">Title</a></li>
+				<li id="tab-title" class="active"><a href="#title" data-toggle="tab">Title</a></li>
 				<li id="tab-subject"><a href="#subject" data-toggle="tab">Subject</a></li>
 				<li id="tab-numbers"><a href="#numbers" data-toggle="tab">Number</a></li>				
-				<li id="tab-advanced" class="active"><a href="#advanced" data-toggle="tab">Advanced Search</a></li>			
+				<li id="tab-advanced"><a href="#advanced" data-toggle="tab">Advanced Search</a></li>
+				<!-- <li id="tab-journal"><a href="#journal" data-toggle="tab">Journal</a></li> -->
+				<!--<li id="tab-database"><a href="#database" data-toggle="tab">Database</a></li>-->
+				<!--<li id="tab-reserves"><a href="#reserves" data-toggle="tab">Reserve</a></li>-->
 			</ul>
 		</div>
 		<div class="visible-sm visible-xs mobile dropdown">
-	      <label for="selectNavigation" class="float-left">Search Type:</label>
+			<label for="selectNavigation" class="float-left">Search Type:</label>
 			<select name="selectNavigation" id="mobile_drop" type="button" data-toggle="dropdown" class="mobile form-control btn btn-primary dropdown-toggle" >
 				<option id="mobile_keyword" value="#keyword">Keyword</option>
 				<option id="mobile_author" value="#author">Author</option>
 				<option id="mobile_title" value="#title">Title</option>
 				<option id="mobile_subject" value="#subject">Subject</option>
 				<option id="mobile_numbers" value="#numbers">Number</option>
-				<option id="mobile_advanced" value="/search~S6/X">Advanced Search</option>
+				<option id="mobile_advanced" value="/search/X">Advanced Search</option>
 			</select>
 		</div>
 		
@@ -108,7 +115,7 @@
 				
 			</div>			
 			
-			<div class="tab-pane active" id="advanced">
+				<div class="tab-pane" id="			<div class="tab-pane" id="advanced">
 				<!--<h1>Advanced</h1>
 				<p>Advanced Advanced Advanced Advanced Advanced Advanced Advanced Advanced Advanced </p> -->
 
@@ -367,8 +374,9 @@
 			
 		</form>
 		</div> <!-- /advancedsearchformbegin token-->
-
-		<script type="text/javascript">
+		
+<script type="text/javascript">
+	 
 			$(document).ready(function() {
 				//change advanced search tab to direct link 
 				//	:do this only if we're NOT on the advanced search page
@@ -376,7 +384,7 @@
 					document.getElementById('tab-advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
 					//document.getElementById('mobile_advanced').getElementsByTagName('a')[0].removeAttribute('data-toggle');
 					document.getElementById('tab-advanced').getElementsByTagName('a')[0].href='/search/X';
-					//document.getElementById('mobile_advanced').getElementsByTagName('option').value='#advanced';
+					////document.getElementById('mobile_advanced').getElementsByTagName('option').value='#advanced';
 				}
 				//do this if we're on the advanced search page
 				else {
@@ -410,8 +418,8 @@
 						
 			</div> <!-- /advanced search tab -->
 			
-
-			<div class="tab-pane" id="title">
+			
+			<div class="tab-pane active" id="title">
 				
 
 		<!-- TITLE-->
@@ -479,7 +487,39 @@
 											
 				<div class="form-group">
 					<div class="col-md-offset-1 col-md-11">
+					<input type="hidden" id="iiiFormHandle_1"/>
 						<button name="SUBMIT" type="submit" class="btn btn-default">Search</button>
+						<script type="text/JavaScript">
+
+//getFormHandleForm() is in common.js
+var evtobj = getFormHandleForm(1);
+if (document.layers)
+    {
+    document.captureEvents(Event.KEYUP);
+    }
+document.onkeyup = function(evt)
+{
+if (!evt) evt = window.event;
+var keyCode;
+if (evt.which) keyCode = evt.which;
+else if (evt.keyCode) keyCode = evt.keyCode;
+var targ;
+if (evt.target) targ = evt.target;
+else if (evt.srcElement) targ = evt.srcElement;
+if (targ.nodeType == 3) //for Safari bug
+    targ = targ.parentNode;
+if (targ.form)
+    {
+    targ = targ.form;
+    //alert('targ='+targ+'  evtobj='+evtobj);
+    if (keyCode == 13 && targ == evtobj)
+        {
+        iiiDoSubmit_1();
+        }
+    }
+};
+
+</script>
 					</div>
 				</div>
 
@@ -1537,6 +1577,7 @@ $(document).ready(function() {
 	</div>
 	<!-- /SEARCH CONTAINER -->
 
-</body>
 <!--{botlogo}-->
+</body>
+
 </html>
