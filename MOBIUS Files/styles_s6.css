@@ -278,6 +278,20 @@ margin: 3px;
 color: black;
 }
 
+.patFuncHeaders {
+display: none;
+padding-left: 3px;
+padding-right: 3px;
+}
+
+.patFuncRating {
+display: none;
+}
+
+.patFuncBarcode{
+display: none;
+}
+
 #showsmallsplit1 {
 display: none;
 }
