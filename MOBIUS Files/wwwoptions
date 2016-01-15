@@ -250,7 +250,7 @@ MY_LISTS=true
 ICON_MYLISTS=<div class="ICON_MYLISTS btn btn-default catnav"><i class="fa fa-list-ul fa-sm"></i> My Lists </div>
 ICON_MYLISTS_EXPORT=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_MYLISTS_EXPORT btn btn-default catnav"><i class="fa fa-paper-plane-o fa-sm"></i> Export List </div></div>
 ICON_MYLISTS_MOVE=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_MYLISTS_MOVE btn btn-default catnav"><i class="fa fa-arrows fa-sm"></i> Move Marked </div></div>
-ICON_MYLISTS_REQUEST=div class="ICON_MYLISTS_REQUEST btn btn-default catnav">Request</div>
+ICON_MYLISTS_REQUEST=<div class="ICON_MYLISTS_REQUEST btn btn-default catnav">Request</div>
 ICON_MYLISTS_REMOVE_DUPLICATES=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_MYLISTS_REMOVE_DUPLICATES btn btn-default catnav"> Remove Duplicates </div></div>
 ICON_MYLISTS_RENAME=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="ICON_MYLISTS_REMOVE_DUPLICATES btn btn-default catnav"> Change Name/Description </div></div>
 ICON_MYLISTS_SAVE=<div id="ICON_MYLISTS_SAVE" class="ICON_MYLISTS_SAVE btn btn-default catnav" style="display:none"> Add to My Lists </div>
